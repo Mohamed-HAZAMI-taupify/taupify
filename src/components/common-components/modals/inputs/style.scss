@@ -1,0 +1,70 @@
+.input-modal-ev {
+  .input-modal-body {
+    .input-modal-inputs-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 3% 0 3% 0;
+
+      .input-select-box {
+        max-width: 150px;
+      }
+      .input-modal-description {
+        min-width: 80% !important;
+      }
+      .input-modal-element {
+        text-align: center;
+        min-width: 40%;
+        margin-bottom: 5%;
+        @media only screen and (max-width: 500px) {
+          min-width: 75%;
+        }
+        h3 {
+          color: $color-white-700;
+        }
+        .MuiSelect-select {
+          padding-right: 0;
+        }
+
+        .MuiFormControl-root {
+          width: -webkit-fill-available;
+          padding: 15px 0 7px !important;
+        }
+      }
+      .check-input {
+        input {
+          margin-top: 12px;
+          @media only screen and (max-width: 520px) {
+            margin-top: 0;
+          }
+        }
+      }
+      .input-modal-element-full {
+        width: -webkit-fill-available;
+      }
+      .input-modal-element {
+        .input-modal-input-box,
+        .input-modal-select-box {
+          width: 100%;
+          margin: 0 0 10% 0;
+        }
+      }
+      .MuiInput-root {
+        font-size: 14px;
+        color: white;
+      }
+      .MuiInput-underline:before {
+        border-color: $color-gray-200;
+      }
+      .MuiInput-underline:after {
+        border-color: $color-yellow-900;
+      }
+    }
+  }
+  .input-modal-header {
+    background-color: $color-black;
+  }
+  .header-with-img {
+    background-color: $color-white;
+  }
+}

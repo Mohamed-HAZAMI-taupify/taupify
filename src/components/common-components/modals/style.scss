@@ -1,0 +1,71 @@
+@import "./inputs/style.scss";
+@import "./aspect/style.scss";
+
+.modal-ev {
+  .modal-content {
+    min-width: 70em;
+    border: none;
+    @media only screen and (max-width: 800px) {
+      min-width: 50em;
+      right: 0;
+    }
+    @media only screen and (max-width: 520px) {
+      min-width: 20em;
+    }
+  }
+  .modal-body {
+    background-image: url(../../../assets/background.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $color-black;
+    width: 100%;
+    @media only screen and (max-width: 350px) {
+      background-size: cover !important;
+    }
+    padding: 5%;
+  }
+  .modal-header,
+  .header-with-img {
+    height: 10em;
+    display: flex;
+    border: none;
+    h5 {
+      margin-right: auto;
+      margin-left: auto;
+      align-self: flex-end;
+      text-align: center;
+      padding-left: 29.6px;
+      color: $color-white-600;
+      font-size: 30px;
+      font-family: $font-cairo;
+      letter-spacing: 1.5px;
+    }
+    button {
+      margin-left: 0;
+    }
+  }
+
+  .block-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -75px;
+    margin-bottom: 25px;
+    @media only screen and (max-width: 520px) {
+      margin-top: -100px;
+    }
+    .input-circular-image {
+      display: none;
+    }
+    .image-container-circular-bordered {
+      height: 190px;
+      width: 190px;
+      .image-circular-bordered {
+        border-radius: 50%;
+        height: 190px;
+        width: 190px;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+  }
+}

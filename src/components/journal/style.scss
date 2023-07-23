@@ -1,0 +1,58 @@
+@import "./article/style.scss";
+
+.journal-interface {
+
+  .section-journal {
+    @media screen and (max-width: 949px) {
+      margin-bottom: 0px !important;
+    }
+    .carousel {
+      height: 540px;
+      @media screen and (max-width: 949px) {
+        height: 80vh;
+      }
+      img {
+        width: 100%;
+        display: inline-block;
+        height: 540px;
+        object-fit: cover;
+        pointer-events: none;
+        // opacity: 0.7;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+        @media screen and (max-width: 949px) {
+          height: 60%;
+        }
+      }
+    }
+
+    .carousel-indicators {
+      bottom: 0 !important;
+    }
+    .carousel-indicators li {
+      background-color: $color-orange-900;
+    }
+    @media screen and (max-width: 949px) {
+      .carousel-control-prev {
+        margin-top: 18vh;
+        align-items: flex-start;
+      }
+
+      .carousel-control-next {
+        margin-top: 18vh;
+        align-items: flex-start;
+      }
+
+      .activities-slide .slide .carousel-item .carousel-caption {
+        bottom: 0 !important;
+        max-width: none !important;
+        height: 40% !important;
+      }
+      .carousel-inner {
+        bottom: 0 !important;
+        max-width: none !important;
+        height: 100% !important;
+      }
+    }
+  }
+}

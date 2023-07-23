@@ -1,0 +1,11 @@
+.rdv-info-modal-body {
+  color: $color-white !important;
+  text-align: center !important;
+  font-family: $font-gt-sectra-fine;
+  font-size: 28px;
+  padding-top: 16% !important;
+
+  @media screen and (max-width: 700px) {
+    padding-top: 10% !important;
+  }
+}

@@ -1,0 +1,38 @@
+.istrend-column-article input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+}
+
+.state-column-article {
+  .select-container-article {
+    margin: 13px 0 15px 0;
+
+    @media (max-width: 1340px) {
+      .css-1n79qgs-control {
+        width: 160px;
+      }
+      .css-1h3tcj3-placeholder {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .css-1n79qgs-control {
+        width: 160px;
+      }
+      .css-1h3tcj3-placeholder {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 624px) {
+      .css-1n79qgs-control {
+        width: 140px;
+      }
+      .css-1h3tcj3-placeholder {
+        font-size: 9px;
+      }
+    }
+  }
+}

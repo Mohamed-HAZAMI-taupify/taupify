@@ -1,0 +1,185 @@
+.global-container-form {
+  width: 100%;
+  background-color: $color-white-600;
+
+  .header-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color-black;
+
+    @media screen and (max-height:500px) {
+      height: 100vh;
+    }
+
+    .contest-image {
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      position: absolute;
+      object-fit: cover;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    .contest-image-mobile {
+      margin-top: 50px;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      position: absolute;
+      object-fit: cover;
+    }
+
+    .contest-image-tablette {
+      margin-top: 100px;
+      width: 100%;
+      height: 85vh;
+      z-index: 1;
+      position: absolute;
+      object-fit: cover;
+
+    }
+
+
+  }
+
+  .inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      width: 100%;
+    }
+
+    .form {
+      margin: 125px auto 60px auto;
+      width: 66%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 949px) {
+        width: 100%;
+      }
+
+
+
+      .inscription-description {
+        font-size: 4em;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: $font-poppins;
+        letter-spacing: 1;
+
+        @media screen and (max-width: 600px) {
+          font-size: 2.5em;
+        }
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+
+      }
+
+      p {
+        text-align: center;
+        font-size: 2em;
+        margin: 10px;
+        font-family: $font-montserrat;
+      }
+
+      .input-checkbox {
+        text-align: center;
+
+        .input-label {
+          font-size: 1rem;
+          font-family: $font-roboto;
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: 0.00938em;
+          text-transform: none;
+          padding: 10px;
+        }
+      }
+
+      .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 270px;
+
+        .input {
+          .input-checkbox {
+            display: flex;
+            justify-content: center;
+
+            .input-label {
+              font-size: 1rem;
+              font-family: $font-roboto;
+              font-weight: 400;
+              line-height: 1.5;
+              letter-spacing: 0.00938em;
+              text-transform: none;
+              padding: 10px;
+            }
+          }
+
+          .alert {
+            margin-top: 2px;
+            font-size: 1.17rem;
+            color: $color-red-500;
+          }
+
+          h3 {
+            font-family: $font-circular;
+          }
+
+          width: 50%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @media screen and (max-width: 949px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.required-label {
+  color: $color-red-500;
+  font-size: 14px;
+}
+
+.rejoignez-nous-button {
+  background-color: $color-black;
+  border: none;
+  height: 40px;
+  width: 250px;
+  margin: 20px;
+
+  .rejoignez-nous-button-span {
+    color: $color-white;
+    font-size: 20px;
+  }
+}
+
+.rejoignez-nous-button:hover {
+  background-color: $color-black;
+}

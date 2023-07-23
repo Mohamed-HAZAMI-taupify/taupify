@@ -1,0 +1,349 @@
+.form-objet {
+  background-color: $color-black-500;
+  border: none;
+}
+.form-objet::placeholder {
+  font-family: $font-montserrat !important;
+  font-size: small;
+  font-weight: 600;
+  color: $color-gray-700;
+}
+.mail-button {
+  border: none;
+  font-size: 16px !important;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 5% !important;
+  font-family: $font-montserrat !important;
+}
+.mail-button-black {
+  background-color: $color-black-500;
+}
+.mail-button-white {
+  background-color: $color-white;
+  color: $color-black;
+}
+.selected-mail {
+  margin-left: 2.2em;
+  font-family: $font-monospace;
+  font-size: x-small;
+  color: $color-white;
+}
+
+.envoyer-test {
+  font-family: $font-monospace;
+  font-size: x-small;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $color-white-600;
+}
+
+.descr-mail {
+  color: $color-black;
+  margin-left: 66%;
+  margin-top: -80%;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  white-space: pre-wrap;
+  font-size: initial;
+}
+
+.drops-container {
+  display: flex;
+  justify-content: center;
+  .col-sm-1 {
+    display: flex;
+    justify-content: center;
+  }
+}
+.dropdown-theme-mail {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.selected-mail-res {
+  text-align: left;
+  font-family: $font-monospace;
+  font-size: x-small;
+  font-weight: 600;
+  display: flex;
+}
+
+.selected-mail-theme img {
+  width: 100%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.selected-mail-theme {
+  padding: 0.05em;
+  border-style: ridge;
+  border-width: 2px;
+  box-shadow: 0 3px 7px $color-black-900, 0 10px 10px $color-black-900;
+  cursor: -webkit-grab;
+}
+
+.selected-mail-theme:hover {
+  box-shadow: 0 14px 28px $color-black-900, 0 10px 10px $color-black-900;
+}
+.reinitialiser-mail {
+  cursor: pointer;
+  img {
+    width: 20px !important;
+    display: block !important;
+    margin-right: 409px !important;
+    margin-top: -11px !important;
+  }
+}
+.mail-header {
+  justify-content: flex-end !important;
+  background-color: $color-black;
+}
+.remove-icon {
+  margin-left: 10px;
+  img {
+    width: 14px;
+    cursor: pointer;
+  }
+}
+
+// .modal-header .close:hover {
+//   background-color: $color-black-500;
+// }
+
+// .modal-header .close {
+//   display: flex;
+//   align-items: center;
+//   padding-top: 0 !important;
+//   margin-top: -9px !important;
+// }
+// .modal-dialog .modal-content .modal-header span {
+//   color: $color-white !important;
+// }
+.dropdown-mail {
+  background-color: $color-black-500;
+}
+.dropdown-item-mail {
+  cursor: pointer;
+  white-space: pre-wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  color: $color-gray-200 !important;
+}
+
+///// contenu à afficher onHover STARTS /////
+.ButtonSendMail-content:after {
+  content: "\2709";
+}
+///// contenu à afficher onHover ENDS /////
+
+.annulation-button {
+  width: 100px;
+  background: $color-black;
+  border: none;
+  font-size: 20px;
+  border: 1px solid $color-gray-700;
+}
+
+.confirmation-button {
+  width: 100px;
+  background: $color-gray-900;
+  border: none;
+  font-size: 20px;
+}
+.form-group-objet {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+.objet-mail {
+  font-family: $font-roboto;
+  font-size: x-large;
+}
+
+.mail-footer {
+  padding-bottom: 25px !important;
+}
+
+///// STYLING TOOLTIP STARTS /////
+
+/*tooltip Box*/
+.con-tooltip-mail {
+  position: relative;
+  z-index: 54;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+/*tooltip */
+.tooltip-mail {
+  visibility: hidden;
+  position: absolute;
+  opacity: 1;
+  width: fit-content !important;
+  height: 20em;
+  //padding: 0px 20px;
+  background: $color-black-700;
+  color: $color-black;
+  top: -140%;
+  left: -25%;
+  border-radius: 9px;
+  font: 16px;
+  transform: translateY(9px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px $color-black-600;
+}
+
+/* tooltip  after*/
+.tooltip-mail::after {
+  content: " ";
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: 12px 12.5px 0 12.5px;
+  border-color: $color-black-700 transparent transparent transparent;
+  position: absolute;
+  margin-top: -25%;
+}
+
+.con-tooltip-mail:hover .tooltip-mail {
+  visibility: visible;
+  transform: translateY(-10px);
+  opacity: 1;
+  transition: 0.3s linear;
+  //  animation: odsoky 1s ease-in-out infinite  alternate;
+}
+
+@keyframes odsoky {
+  0% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+/*hover ToolTip*/
+// .right:hover {
+//   transform: translateX(6px);
+// }
+
+.left-mail:hover {
+  transform: translateX(6px);
+}
+
+/*right*/
+.right-mail .tooltip-mail {
+  top: 30%;
+  left: 113%;
+  // @media screen and (max-width: 1575px) {
+  //   //left: 180% !important ;
+  //   left: 135% !important;
+  // }
+  // @media screen and (max-width: 1430px) {
+  //   //left: 200% !important ;
+  //   left: 150% !important;
+
+  // }
+  // @media screen and (max-width: 1300px) {
+  //   visibility: hidden !important ;
+  // }
+}
+
+.right-mail .tooltip-mail::after {
+  top: 35%;
+  left: -3%;
+  transform: rotate(90deg);
+}
+
+/*left*/
+.left-mail .tooltip-mail {
+  top: -20%;
+  left: -150%;
+
+  @media screen and (max-width: 1550px) {
+    //left: -280% !important ;
+    left: -180% !important;
+  }
+  @media screen and (max-width: 1490px) {
+    left: -180% !important;
+  }
+  @media screen and (max-width: 1440px) {
+    left: -210% !important ;
+  }
+  @media screen and (max-width: 1300px) {
+    visibility: hidden !important ;
+  }
+}
+
+.left-mail .tooltip-mail::after {
+  top: 30%;
+  left: 98%;
+  transform: rotate(-90deg);
+}
+
+.title-tooltip-mail {
+  font-size: 2rem;
+  margin-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  color: $color-gray-700;
+  letter-spacing: 3px;
+  margin-top: 57%;
+}
+
+.content-tooltip-mail p {
+  font-size: 14px;
+  margin-left: 15px;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.image-tooltip-mail img {
+  width: 220px;
+}
+
+.image-tooltip-mail {
+  margin-top: 10px;
+  width: fit-content;
+  height: 300px;
+  overflow: hidden;
+  display: grid;
+}
+///// STYLING TOOLTIP ENDS /////
+
+.sent-counter {
+  color: $color-white;
+  font-size: 16px;
+  font-weight: 900;
+}
+.header-confirmation {
+  font-size: 18px !important;
+}
+
+.container-confirmation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sales-module {
+  box-shadow: 0 2px 1px $color-black-900;
+  border-radius: 4px;
+  max-width: 240px;
+  margin: 60px auto;
+  background-color: $color-white;
+  overflow: hidden;
+}
+
+.disabled-button {
+  cursor: not-allowed;
+}
+.fa-times-circle {
+  cursor: pointer;
+}

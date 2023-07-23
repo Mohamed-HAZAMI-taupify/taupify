@@ -1,0 +1,191 @@
+$color-gray-100: #e4e4e4;
+$color-gray-200: #b4b7ba;
+$color-gray-300: #b3b3b3;
+$color-gray-400: #e0e0e0b6;
+$color-gray-500: #a6a6a4;
+$color-gray-600: #8c8c8c;
+$color-gray-700: #6c757d;
+$color-gray-800: #6c757d75;
+$color-gray-900: #70707052;
+
+$color-yellow-900: #cac531;
+$color-yellow-700: #d4dc2e;
+$color-yellow-600: #cbdc43;
+$color-yellow-400: #e6e692;
+$color-yellow-100: #e7e7de;
+
+$color-green-900: #155724;
+$color-green-700: #2bba8f;
+$color-green-400: yellowgreen;
+$color-green-300: #00f7ad;
+$color-green-200: #a8cfbd;
+$color-green-100: #bfb;
+
+$color-blue-900: #1a252f;
+$color-blue-800: #0f3057;
+$color-blue-700: #273751;
+$color-blue-600: #323944;
+$color-blue-400: #495464;
+$color-blue-200: #008891;
+$color-blue-100: #17a2b8;
+
+$color-red-900: rgb(231, 3, 3);
+$color-red-700: rgb(255, 1, 1);
+$color-red-500: #dc3545;
+$color-red-300: rgb(255, 72, 72);
+
+$color-white-900: #f7f7f8;
+$color-white-800: #f1f3f8;
+$color-white-700: #f0f8ff;
+$color-white-600: #eee;
+$color-white-500: #d6e0f0;
+$color-white-400: #ffffffb6;
+$color-white-300: #ccc;
+
+$color-black-900: rgba(0, 0, 0, 0.25);
+$color-black-800: #0a0a0a;
+$color-black-700: #181818;
+$color-black-600: rgba(56, 54, 54, 0.86);
+$color-black-500: #2a2a2a;
+
+$color-orange-900: #ff8a1f;
+$color-orange-700: #f4544c;
+$color-orange-500: #fd8170;
+$color-orange-200: rgba(244, 84, 76, 0.4);
+
+$color-white: white !default;
+$color-black: black !default;
+$color-gray: gray !default;
+$color-blue: #007bff !default;
+$color-indigo: #6610f2 !default;
+$color-purple: #6f42c1 !default;
+$color-pink: #e83e8c !default;
+$color-red: #dc3545 !default;
+$color-orange: #fd7e14 !default;
+$color-yellow: #d6de27 !default;
+$color-green: #28a745 !default;
+$color-teal: #20c997 !default;
+$color-cyan: #17a2b8 !default;
+$color-saumon: #fd8170 !default;
+$color-dirty-white: #dfe6e9 !default;
+$color-black-claire: #000000d1 !default;
+$color-green: #a8cfbd !default;
+
+$colors-ev: () !default;
+$colors-ev: map-merge(
+  (
+    "color-blue": $color-blue,
+    "color-indigo": $color-indigo,
+    "color-purple": $color-purple,
+    "color-pink": $color-pink,
+    "color-red": $color-red,
+    "color-orange": $color-orange,
+    "color-yellow": $color-yellow,
+    "color-green": $color-green,
+    "color-teal": $color-teal,
+    "color-cyan": $color-cyan,
+    "color-white": $color-white,
+    "color-gray": $color-gray-600,
+    "color-gray-dark": $color-gray-800,
+  ),
+  $colors-ev
+);
+
+$primary-ev: $color-blue !default;
+$secondary-ev: $color-gray-600 !default;
+$success-ev: $color-green !default;
+$info-ev: $color-cyan !default;
+$warning-ev: $color-yellow !default;
+$danger-ev: $color-red !default;
+$light-ev: $color-gray-100 !default;
+$dark-ev: $color-gray-800 !default;
+
+$theme-colors-ev: () !default;
+$theme-colors: map-merge(
+  (
+    "primary-ev": $primary-ev,
+    "secondary-ev": $secondary-ev,
+    "success-ev": $success-ev,
+    "info-ev": $info-ev,
+    "warning-ev": $warning-ev,
+    "danger-ev": $danger-ev,
+    "light-ev": $light-ev,
+    "dark-ev": $dark-ev,
+  ),
+  $theme-colors-ev
+);
+
+$font-monospace: monospace;
+$font-sans-serif: sans-serif;
+$font-comic-sans-ms: "Comic Sans MS", cursive, sans-serif;
+$font-cairo: "Cairo", sans-serif;
+$font-cursive: cursive;
+@font-face {
+  font-family: "circular";
+  src: url("../../assets/fonts/CircularStdBlack.ttf");
+}
+$font-circular: "circular";
+$font-sectra-fine: "sectra-fine";
+$font-arial: Arial, Helvetica, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+$font-roboto: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$font-montserrat: "Montserrat", sans-serif;
+$font-courier: Courier;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$font-poppins: "Poppins", sans-serif;
+$font-serif: serif;
+$font-bookman-old-style: "Bookman Old Style", sans-serif;
+$font-cambria: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+@font-face {
+  font-family: "gt-sectra-fine";
+  src: url(../../assets/fonts/GTSectraFineBook.ttf);
+}
+$font-gt-sectra-fine: "gt-sectra-fine";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$font-raleway: "Raleway", sans-serif;
+$font-anton: "Anton", sans-serif;
+$font-gill-sans: "Gill Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+$font-oswald: "Oswald", sans-serif;
+$font-system-ui: system-ui, sans-serif;
+$font-proxima-nova: "Proxima Nova", sans-serif;
+
+@font-face {
+  font-family: "barcelony";
+  src: url("../../assets/fonts/Barcelony.ttf");
+}
+$font-barcelony: "barcelony";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap');
+$font-dancy: 'Dancing Script', cursive;
+
+
+.weight-thin {
+  font-weight: 100;
+}
+.weight-extra-light {
+  font-weight: 200;
+}
+.weight-light {
+  font-weight: 300;
+}
+.weight-regular {
+  font-weight: 400;
+}
+.weight-medium {
+  font-weight: 500;
+}
+.weight-semi-bold {
+  font-weight: 600;
+}
+.weight-bold {
+  font-weight: 700;
+}
+.weight-extra-bold {
+  font-weight: 800;
+}
+.weight-black{
+  font-weight: 900 !important;
+}
+ 

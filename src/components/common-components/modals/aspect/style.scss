@@ -1,0 +1,41 @@
+.details-modal-ev {
+  .details-modal-body {
+    .card-details {
+      .details-container {
+        display: flex;
+        font-size: 14px;
+        margin: 7px 0 7px 0;
+        .details-label {
+          margin-left: 14px;
+          width: 35%;
+          @media screen and (max-width: 450px) {
+            margin-left: 0;
+            width: 50%;
+          }
+        }
+        .details-value {
+          width: 75%;
+          font-weight: 600;
+          @media screen and (max-width: 450px) {
+            width: 50%;
+            align-self: center;
+          }
+          span {
+            margin: 0 8px 0 0;
+            font-weight: 600;
+          }
+        }
+      }
+      .card-description {
+        margin: 0;
+        max-width: 550px;
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .details-modal-header {
+    background-color: $color-black;
+  }
+}

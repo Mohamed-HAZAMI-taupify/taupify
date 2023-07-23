@@ -1,0 +1,75 @@
+.accodion-title {
+  text-align: center;
+  display: flex;
+  padding-left: 20px;
+  margin-top: 30px;
+  span {
+    font-family: $font-monospace;
+    font-size: 16px;
+    margin-right: 12px;
+    @media screen and (max-width:400px) {
+      &:first-child{
+        font-size: 12px;
+      }
+    }
+ 
+  }
+  span:last-child {
+    font-weight: 900;
+  }
+}
+  .accordion-image-container {
+    width: 45px;
+    height: 45px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: -15px;
+      margin-left: 10px;
+      @media screen and (max-width:400px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+
+.accordions-details {
+  tr{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  td {
+    text-align: left;
+    padding-left: 18px;
+  }
+  span {
+    font-size: 16px;
+    font-family: inherit;
+    @media screen and (max-width:400px) {
+     
+        font-size: 12px;
+      
+    }
+  }
+  .primary-data {
+    font-size: 17px;
+    color: $color-yellow-700;
+  }
+  .secondary-data {
+    font-size: 17px;
+  }
+}
+
+.accordion-card-body {
+  min-height: 110px !important;
+  .MuiAccordionSummary-content{
+    justify-content: space-around;
+  }
+}
+
+.col-accordion{
+  .card{
+border: none;
+  }
+} 

@@ -1,0 +1,303 @@
+#main.reservation {
+    padding-top: 5em;
+  
+    @media screen and (max-width: 700px) {
+      padding-top: 7em;
+    }
+  
+    @media screen and (max-width: 575px) {
+      padding-top: 2em;
+    }
+  }
+  
+  #main {
+    padding-top: 0;
+  }
+  
+  #main.reservation .reservation_step1,
+  #main.reservation .reservation_step4 {
+    margin-bottom: 20px;
+  }
+  
+  #main section {
+    clear: both;
+  }
+  
+  #main.reservation .reservation-cta {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  #main.reservation .reservation-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .no-gutter {
+    width: 100%;
+  }
+  
+  #main.reservation .reservation-title h1 {
+    @media screen and (max-width: 1440px) {
+      font-size: 2.7vw;
+      line-height: 3vw;
+    }
+  
+    margin-bottom: 8px;
+    font-size: 50px;
+  
+    @media screen and (max-width: 700px) {
+      font-size: 6vw;
+      line-height: 8vw;
+      margin-bottom: 10px;
+    }
+  }
+
+  
+  .grid-col.centered {
+    margin: 0 auto;
+    float: none;
+  }
+  
+  .grid-col.col_size-10 {
+    width: 83.33333%;
+    clear: both;
+    float: none;
+  }
+  
+  #main.reservation .reservation-title .text-emphasis,
+  #main.reservation .reservation-title .text-regular {
+    line-height: 26px;
+  
+    @media screen and (max-width: 1440px) {
+      line-height: 1.6vw;
+    }
+  
+    @media screen and (max-width: 700px) {
+      font-size: 4vw;
+      line-height: 4.5vw;
+      display: contents;
+      letter-spacing: 0;
+    }
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+  
+  .text-emphasis,
+  .text-regular {
+    padding-top: 0;
+    line-height: 1.6vw;
+    font-size: 15px;
+    font-family: $font-montserrat;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  
+    @media screen and (max-width: 1440px) {
+      font-size: 1.1vw;
+      line-height: 2vw;
+    }
+  
+    @media screen and (max-width: 700px) {
+      font-size: 4.3vw;
+      line-height: 6vw;
+    }
+  }
+  
+  .text-emphasis,
+  .text-emphasis a,
+  .text-emphasis i,
+  .text-emphasis p,
+  .text-regular,
+  .text-regular a,
+  .text-regular i,
+  .text-regular p {
+    font-family: $font-montserrat;
+  }
+  
+  .reservation-body {
+    padding-top: 102px;
+    color: $color-black;
+    background: $color-white-600;
+  }
+  
+  #main.reservation .reservation_step1 .w_grid,
+  #main.reservation .reservation_step4 .w_grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+  }
+  
+  #main.reservation .reservation_step1 .resa-cover_container,
+  #main.reservation .reservation_step4 .resa-cover_container {
+    width: 100%;
+    background: $color-black;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+  
+  .title-xl-black {
+    color: $color-black;
+    font-family: $font-raleway;
+    text-transform: uppercase;
+  }
+  
+  .text-regular {
+    color: $color-black;
+  }
+  
+  .resa-recap {
+    background-color: $color-black;
+    @media screen and (max-width: 700px) {
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+  
+  .session-item {
+    margin-top: 3em;
+    margin-left: 25%;
+    margin-bottom: 3em;
+    width: 70em;
+    color: $color-white;
+    @media screen and (max-width: 700px) {
+      display: contents;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media screen and (max-width: 1050px) {
+      width: 50em;
+    }
+  
+    @media screen and (max-width: 830px) {
+      width: 40em;
+    }
+  }
+  
+  .title-l.masterclass-txt-reservation {
+    text-align: left;
+    font-size: 30px;
+    font-family: $font-raleway;
+    @media screen and (max-width: 700px) {
+      text-align: center;
+    }
+  }
+  
+  .resa-cover_container_img {
+    display: block;
+    width: 40em;
+    @media screen and (max-width: 1120px) {
+      width: 100%;
+    }
+  }
+  
+  .masterclass-txt-reservation {
+    font-family: $font-montserrat;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+  }
+  
+  .session-item__content_infos {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+  .commentary {
+    letter-spacing: 0.1em;
+  }
+  .adress-reservation {
+    margin-top: 15px;
+  }
+  
+  ////////////////////////
+  .w_grid.limited-content {
+    max-width: 1440px;
+  }
+  .w_grid.no-gutter {
+    padding-left: 0;
+  }
+  .w_grid {
+    width: 90%;
+    padding-left: 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    clear: both;
+  }
+  
+  .w_grid_filter {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    clear: both;
+  }
+  
+  #main.reservation .reservation-cta_quit.center {
+    justify-content: center;
+  }
+  #main.reservation .reservation-cta_quit {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .w_grid.no-gutter .grid-col {
+    padding-right: 0;
+  }
+  .grid-col.margin-1 {
+    margin-left: 8.33333%;
+  }
+  .grid-col.col_size-10 {
+    width: 83.33333%;
+    clear: both;
+    float: none;
+  }
+  .grid-col {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 30px;
+  }
+  
+  #main.reservation .reservation-cta .link-annuler {
+    padding: 15px 30px;
+    color: $color-gray-600;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: $font-raleway;
+    text-decoration: none;
+  }
+  
+  #main.reservation .reservation-cta .button-reservation {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    font-size: 11px;
+    background-color: $color-black;
+    color: $color-white;
+    border: 1px solid $color-black;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  
+  #main.reservation .reservation-cta .button-reservation:hover {
+    background-color: $color-white;
+    color: $color-black;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+  }

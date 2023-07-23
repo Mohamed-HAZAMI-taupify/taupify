@@ -1,0 +1,206 @@
+@import "./memberStyle.scss";
+@import "../own-events/style.scss";
+$base-color: $color-white;
+
+$base-font-family: ($font-raleway);
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: top;
+}
+
+g .w_grid-member,
+#main .wrap,
+.button,
+.link.link-underline {
+  overflow: hidden;
+}
+
+
+.container-form-member-profile {
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+}
+
+.w_grid-member {
+  @media screen and (max-width: 1024px) {
+    padding-left: 20px;
+  }
+  @media screen and (max-width: 700px) {
+    margin-bottom: 3vw;
+    padding-left: 10px;
+  }
+  width: 90%;
+  padding-left: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  clear: both;
+}
+.w_grid-member.limited-content {
+  max-width: 1440px;
+}
+
+.w_grid-member.limited-content.planning-container:hover::after {
+  width: 100%;
+  background: $color-black-500;
+  transition: 500ms;
+}
+
+
+.grid-col {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 30px;
+  @media screen and (max-width: 1024px) {
+    padding-right: 20px;
+  }
+  @media screen and (max-width: 700px) {
+    padding-right: 10px;
+  }
+}
+.grid-col.col_size-12 {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+
+.filters-toggler {
+  display: none;
+}
+a .filters-toggler::after {
+  text-align: center;
+
+  @media screen and (max-width: 700px) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 2vw;
+    height: 2vw;
+    -webkit-transform: rotate(-90deg) translateZ(0);
+    -moz-transform: rotate(-90deg) translateZ(0);
+    transform: rotate(-90deg) translateZ(0);
+    -webkit-transition: 550ms cubic-bezier(0.32, 1.07, 0.67, 1);
+    -moz-transition: 550ms cubic-bezier(0.32, 1.07, 0.67, 1);
+    transition: 550ms cubic-bezier(0.32, 1.07, 0.67, 1);
+  }
+}
+
+.day-filter {
+  background-color: $color-black;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.custom-select {
+  display: block;
+  width: 100%;
+}
+select {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark( $color-black,  $color-white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: menulist;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  background-color: -internal-light-dark($color-white, $color-black-500);
+  cursor: default;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  border-radius: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: -internal-light-dark($color-gray-700, $color-gray-500);
+  border-image: initial;
+}
+.w_custom-select {
+  display: inline-block;
+  position: relative;
+}
+.w_custom-select select {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+select:not(:-internal-list-box) {
+  overflow: visible !important;
+}
+
+.grid-col.col_size-4 {
+  width: 33.33333%;
+}
+.filter-container-membre {
+  margin-bottom: 10px;
+}
+
+.grid-col.mobile_size-12 {
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    clear: both;
+    float: none;
+  }
+}
+
+.w_grid-member {
+  .limited-content {
+    max-width: 1440px;
+  }
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+.image-not-found {
+  text-align: center;
+  margin-top: -200px;
+  @media only screen and (max-width: 500px) {
+    img {
+      width: 250px;
+    }
+  }
+}
+
+
+.list_events_padding {
+  padding-bottom: 50px;
+  background-color: white;
+  padding-top: 50px;
+}
+
+.pagination-container {
+  justify-content: center;
+  display: flex;
+  -webkit-box-pack: center;
+  padding: 20px;
+}
+
+.title-events-not-found {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-family:$font-montserrat;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  color: $color-black;
+  letter-spacing: 3px;
+  text-align: center;
+}

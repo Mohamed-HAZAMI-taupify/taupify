@@ -1,0 +1,708 @@
+@import "./music-playlist/style.scss";
+
+.w-gridd.no-gutterr {
+  padding-left: 0;
+
+  .row-coach-singl-image {
+    padding-top: 150px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+
+    .col-sm-6 {
+      @media screen and (min-width: 576px) and (max-width: 1000px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .w-gridd {
+    margin: 0 auto;
+    box-sizing: border-box;
+    clear: both;
+    padding-top: 120px;
+  }
+
+  @media screen and (max-width: 575px) {
+    .w-gridd.no-gutterr {
+      margin-top: 50px;
+    }
+  }
+
+  .trainer-item-container-single-image {
+    display: block;
+    position: relative;
+    color: $color-white;
+    overflow: hidden;
+  }
+
+  .trainer-item-container-cartouche-single-image-row {
+    position: absolute;
+    top: 25%;
+    text-align: center;
+  }
+
+  .trainer-item-container-cartouche-single-image {
+    position: absolute;
+    padding: 1vw 1.3vw;
+    bottom: 0;
+    right: 0;
+    min-width: 50%;
+    background: $color-white;
+    transition: 550ms cubic-bezier(0.32, 1.07, 0.67, 1);
+    text-align: center;
+    min-height: 100px;
+    color: $color-black;
+  }
+
+  .single-coach-img-img {
+    max-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .single-coach-img {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .motion-center {
+    text-align: center;
+  }
+  .item-container-cover-single-image {
+    max-height: 800px;
+  }
+
+  @media screen and (min-width: 575px) and (max-width: 1000px) {
+    .item-container-cover-single-image .single-coach-img-img {
+      max-height: 100vh;
+    }
+
+    .trainer-item-container-single-image
+      .trainer-item-container-cartouche-single-image {
+      min-width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .item-container-cover-single-image .single-coach-img-img {
+      max-height: 100vh;
+    }
+
+    .trainer-item-container-single-image
+      .trainer-item-container-cartouche-single-image {
+      min-width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .item-container-cover-single-image .single-coach-img-img {
+      max-height: 100vh;
+      height: initial;
+    }
+
+    .trainer-item-container-single-image
+      .trainer-item-container-cartouche-single-image {
+      min-width: 100%;
+    }
+  }
+
+  .text-regular-single {
+    margin: 0 auto 60px;
+    font-family: $font-montserrat;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 300;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    color: $color-white;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+    .text-regular-single span {
+      font-size: 14px;
+      line-height: 2vw;
+      padding-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 575px) and (max-width: 1100px) {
+    .text-regular-single span {
+      font-size: 14px;
+      line-height: 3vw;
+      padding-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .coach-info .text-regular-single {
+      width: 100%;
+    }
+
+    .text-regular-single span {
+      font-size: 4vw;
+      line-height: 5vw;
+      padding-top: 30px;
+      color: $color-white;
+    }
+  }
+
+  .beforrcoach .next-iconn {
+    width: 60px;
+    height: 50px;
+    color: $color-black;
+  }
+
+  .nextcoach .next-iconn {
+    width: 60px;
+    height: 50px;
+    color: $color-black;
+  }
+  .navigation-link {
+    margin-top: 15px;
+
+    .navigation-link-no-decoration {
+      text-decoration: none;
+    }
+  }
+  .navigation-link-text {
+    color: $color-black;
+    font-size: 14px;
+  }
+
+  .col-next {
+    border-right-style: solid;
+    border-width: 1px;
+  }
+
+  @media screen and (min-width: 575px) and (max-width: 1000px) {
+    .navigation-link .navigation-link-text {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .navigation-link .navigation-link-text {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .navigation-link .navigation-link-text {
+      font-size: 12px;
+    }
+  }
+
+  .social-media-text {
+    color: $color-white;
+    font-size: 14px;
+    margin-left: 30px;
+
+    .social-media-icon-youtube {
+      color: $color-white;
+      font-size: 14px;
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+
+  .social-media-position {
+    position: absolute;
+    top: 90%;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 575px) and (max-width: 1000px) {
+    .social-media-position {
+      position: absolute;
+      top: 70%;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .social-media-position {
+      left: 5%;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 575px) {
+    .social-media-position {
+      top: 66%;
+      left: 40%;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .social-media-position {
+      top: 66%;
+      left: 40%;
+    }
+  }
+
+  .session-coach {
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 12%;
+  }
+
+  .session-coach-title {
+    padding: 20px;
+  }
+
+  .title-session {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: top;
+    font-family: $font-raleway;
+    color: $color-white;
+  }
+
+  .titre-card-session {
+    color: $color-yellow-700;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: $font-gill-sans;
+  }
+
+  .module-border-wrap {
+    padding-bottom: 1rem;
+    position: relative;
+    background: linear-gradient(
+      to bottom,
+      $color-yellow-700,
+      $color-yellow-600
+    );
+    padding-bottom: 1px;
+    width: 100%;
+    min-width: 270px;
+  }
+
+  .session-card {
+    background: $color-black-800;
+    color: $color-white;
+    border-radius: 0%;
+    min-width: 270px;
+  }
+
+  .card-footer-session {
+    display: block;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    margin-top: 30px;
+
+    .button-session {
+      background: linear-gradient(
+        to right,
+        $color-yellow-700,
+        $color-yellow-400
+      );
+      color: $color-black;
+      font-size: 16px;
+      font-weight: 600;
+      width: 90% !important;
+      margin: 0%;
+      min-height: 40px;
+      font-family: $font-gill-sans;
+    }
+  }
+
+  .jour-session {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-family: $font-raleway;
+    color: $color-white;
+    font-family: $font-gill-sans;
+  }
+
+  .button-session:hover {
+    background: -webkit-linear-gradient(
+      left,
+      $color-yellow-400,
+      $color-yellow-700
+    );
+    color: $color-black;
+  }
+
+  @media screen and (max-width: 575px) {
+    .session-coach {
+      margin-left: 0%;
+    }
+    .title-session {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .module-border-wrap {
+      margin: 5px;
+      min-width: 230px;
+      height: 100%;
+    }
+
+    .session-card {
+      padding: 2rem;
+      min-width: 230px;
+      height: 100%;
+    }
+
+    .card-footer-session {
+      display: flex;
+      position: relative;
+      padding: 0%;
+      margin: 0%;
+      margin-top: 30px;
+
+      .button-session {
+        background: linear-gradient(
+          to right,
+          $color-yellow-700,
+          $color-yellow-400
+        );
+        font-family: $font-gill-sans;
+        color: $color-black;
+      }
+    }
+  }
+
+  .sessiongallery {
+    margin: 0%;
+    width: 100%;
+    max-width: 1500px;
+    position: relative;
+    margin-top: 20px;
+    color: $color-white;
+    padding: 0%;
+  }
+
+  .coachthumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .coachthumbnail {
+    // flex: 1 0 30%;
+    margin: 20px;
+    width: 30%;
+  }
+
+  .coachthumbnail img {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+  }
+
+  @media screen and (max-width: 575px) {
+    .sessiongallery {
+      padding: 20px;
+      padding-right: 60px;
+    }
+
+    .sessiongallery .coachthumbnails {
+      display: block;
+    }
+
+    .coachthumbnails .coachthumbnail {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 850px) and (max-width: 1210px) {
+    .sessiongallery {
+      padding: 20px;
+    }
+    .coachthumbnails .coachthumbnail {
+      width: 45%;
+    }
+  }
+
+  @media screen and (min-width: 575px) and (max-width: 850px) {
+    .sessiongallery {
+      padding: 20px;
+    }
+    .coachthumbnails .coachthumbnail {
+      width: 100%;
+    }
+  }
+
+  .coach-slide-session {
+    color: $color-white;
+    padding-top: 50px;
+    padding-bottom: 35px;
+
+    .InfiniteCarousel {
+      .InfiniteCarouselArrowPrev {
+        width: 60px;
+        height: 60px;
+        background-color: $color-black;
+        left: 0px;
+        transition: width 1s;
+        margin: 0px;
+        .InfiniteCarouselArrowIcon {
+          border-width: 0 2px 2px 0;
+        }
+      }
+      .InfiniteCarouselArrowNext {
+        width: 60px;
+        height: 60px;
+        background-color: $color-black;
+        right: 0px;
+        transition: width 1s;
+        margin: 0px;
+
+        .InfiniteCarouselArrowIcon {
+          border-width: 0 2px 2px 0;
+        }
+      }
+      .InfiniteCarouselDots {
+        display: none;
+      }
+      .InfiniteCarouselArrowNext:hover {
+        width: 100px;
+      }
+      .InfiniteCarouselArrowPrev:hover {
+        width: 100px;
+      }
+    }
+
+    .title {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      h2 {
+        width: fit-content;
+        color: $color-white;
+        font-size: 4.75rem;
+        display: flex;
+        justify-self: center;
+        font-family: $font-sectra-fine;
+        margin-bottom: 6.125rem;
+      }
+    }
+  }
+
+  .trainer-infos-content-container {
+    width: 70%;
+    margin: 5% auto;
+    .coach-info {
+      margin-top: 0px;
+      a {
+        text-decoration: none;
+      }
+      .position-coach {
+        display: flex;
+        font-style: italic;
+        font-size: 14px;
+        color: $color-gray-600;
+        margin: 25px 0px;
+        .position-coach-icon {
+          width: 10px;
+          margin: 0px 10px auto 0px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .coach-list-single {
+    list-style-type: disc;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: top;
+    font-family: $font-montserrat;
+    display: inline-block;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .coach-list-single li {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    color: $color-white;
+    font-size: 14px;
+  }
+
+  .coach-list-single ::before {
+    content: "  ";
+  }
+  .coach-list-single .coach-activities::before {
+    content: "\00a0 ";
+  }
+  .coach-list-single .coach-activities::after {
+    content: " \00b7 ";
+  }
+
+  .coach-list-single .coach-activities:last-child::after {
+    content: none;
+  }
+
+  @media screen and (max-width: 575px) {
+    .trainer-infos-content-container {
+      width: 90%;
+      margin: 5% auto;
+      text-align: center;
+    }
+    .coach-info {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  .trainer-card-caroussel-first-container {
+    margin: 10px;
+    background: -webkit-linear-gradient(
+      right,
+      $color-green-300,
+      $color-yellow-700
+    );
+    padding-bottom: 2px;
+    @media screen and (max-width: 600px) {
+      margin: 15px;
+      background-image: -webkit-linear-gradient(
+        right bottom,
+        $color-blue-100,
+        $color-orange-700
+      );
+    }
+    .trainer-card-caroussel-container {
+      .profile-card-slider {
+        background: $color-black-700;
+        color: $color-white;
+        .profile-content {
+          padding: 40px 20px;
+
+          .box-skeleton-coach-events {
+            background: $color-white;
+            border-radius: 2px;
+
+            .skeleton-coach-events {
+              height: 100%;
+              width: 100%;
+              border-radius: 2px;
+            }
+          }
+
+          .box-skeleton-coach-events-startedTime {
+            margin: 10px 0px 0px 10px;
+          }
+
+          .box-skeleton-coach-events-date-title {
+            margin: 10px;
+          }
+
+          .button-slider-coach-card {
+            min-height: 40px;
+            min-width: 180px;
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 5px;
+
+            @media screen and (max-width: 1450px) and (min-width: 600px) {
+              min-width: 120px;
+            }
+
+            @media screen and (max-width: 600px) {
+              background-image: -webkit-linear-gradient(
+                right bottom,
+                $color-blue-100,
+                $color-orange-700
+              );
+              color: $color-white;
+            }
+          }
+
+          .button-slider-coach-card:hover {
+            background-image: linear-gradient(
+              right bottom,
+              $color-yellow-400,
+              $color-yellow-700
+            );
+            background-image: -webkit-linear-gradient(
+              right bottom,
+              $color-yellow-400,
+              $color-yellow-700
+            );
+          }
+
+          .profile-card-text {
+            color: $color-white;
+            font-size: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: left;
+
+            @media screen and (max-width: 1500px) and (min-width: 1200px) {
+              font-size: 28px;
+            }
+
+            @media screen and (max-width: 1200px) and (min-width: 600px) {
+              font-size: 24px;
+            }
+
+            @media screen and (max-width: 600px) {
+              text-align: center;
+              font-size: 24px;
+            }
+          }
+
+          .profile-card-p {
+            color: $color-white;
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+
+            @media screen and (max-width: 600px) {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .div-card-planning-coach-text {
+    height: 40px;
+
+    .span-card-coach {
+      color: azure;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}

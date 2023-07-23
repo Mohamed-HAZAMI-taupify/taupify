@@ -1,0 +1,124 @@
+.planning-gallery-container {
+  padding: 0;
+  margin: 0;
+  background: $color-white-800;
+  min-height: 80vh;
+}
+
+.gallery {
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.downlad-planning-container {
+  padding: 8px;
+}
+
+.icon-download-planning {
+  width: 40px !important;
+  height: 40px !important;
+  margin-left: 15px !important;
+  padding-bottom: 7px;
+
+  @media screen and (max-width: 800px) {
+    height: 30px !important;
+    width: 30px !important;
+    padding-top: auto !important;
+  }
+}
+
+.download-planning-div {
+  width: 40%;
+  background-color: $color-black;
+  min-height: 60px;
+  text-align: center;
+  padding: 8px;
+margin:auto;
+  @media screen and (max-width: 800px) {
+    height: 25px !important;
+    width: 70% !important;
+    padding-top: 15px!important;
+  }
+}
+
+.download-planning-a {
+  text-decoration: none !important;
+  text-align: center;
+
+  .download-planning-span {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none !important;
+    text-align: center;
+    font-family: $font-poppins !important;
+    font-weight: 500;
+    align-items: center !important;
+    @media screen and (max-width: 800px) {
+      font-size: 13px !important;
+    }
+  }
+}
+
+.cattitle {
+  font-size: 30px;
+  text-align: center;
+  position: fixed;
+  bottom: -10px;
+  z-index: 1;
+  color: $color-white-800;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.1;
+}
+@media screen and (min-width: 600px) {
+  .cattitle {
+    font-size: 100px;
+    /* bottom: -130px; */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cattitle {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cattitle {
+    font-size: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cattitle {
+    font-size: 120px;
+  }
+}
+
+.title-planning-collectif-catalog {
+  padding: 120px 0px 20px 0px;
+}
+
+.dividerText {
+  display: flex;
+  align-items: center;
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  font-family: $font-poppins !important;
+  margin-top:20px;
+  text-align: center;
+ line-height: 1.5;
+ 
+ 
+  @media screen and (max-width: 800px) {
+    font-size: 20px !important;
+    line-height:1.8!important;
+  }
+}
+
+

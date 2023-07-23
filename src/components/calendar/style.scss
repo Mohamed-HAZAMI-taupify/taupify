@@ -1,0 +1,74 @@
+@import "../calendar/add-events/style.scss";
+
+.center-calendar-events {
+  text-align: center;
+}
+
+.add-event-calendar {
+  background-color: $color-blue-900;
+  color: $color-white;
+}
+
+.container-calendar {
+  position: relative;
+  margin: 0;
+  top: 10%;
+  padding: 50px;
+
+  background: $color-white-600;
+  font-size: 1.4em;
+  height: auto;
+
+  .calendar-container {
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    position: relative;
+    margin-top: 20px;
+    background-color: $color-white;
+    padding-top: 50px;
+  }
+}
+
+.gallery-calendar {
+  max-width: 1400px;
+  width: 100%;
+
+  .fc-day-today {
+    background: $color-white-700 !important;
+    border: none !important;
+    border-top: 1px solid $color-white-600 !important;
+    font-weight: bold;
+  }
+}
+
+.external-events-fc {
+  padding: 10px;
+  width: 100% !important;
+  height: auto;
+  max-height: -webkit-fill-available;
+}
+
+.event-title-calendar {
+  align-self: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.fc-event {
+  padding: 10px;
+  margin: 10px;
+  color: $color-black;
+  font-family: $font-serif;
+  cursor: pointer;
+}
+
+.fc .fc-timegrid-slot {
+  height: 3em !important;
+  border-bottom: 0 /* each cell owns its top border */;
+}
+
+.bold-span {
+  font-weight: bold;
+}

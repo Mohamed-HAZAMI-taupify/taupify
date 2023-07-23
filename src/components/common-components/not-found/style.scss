@@ -1,0 +1,48 @@
+.wrong-route-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  text-align: center;
+  padding: 20px;
+
+  .not-found-image {
+    width: fit-content;
+
+    @media (max-width: 650px) {
+      width: 260px;
+    }
+  }
+
+  h2 {
+    font-family: $font-gt-sectra-fine;
+    text-transform: uppercase;
+    margin: 20px;
+    font-weight: bold;
+  }
+  a {
+    font-size: medium;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: large;
+  }
+}
+
+.wrong-route-page-path {
+  background-color: $color-white-800 !important;
+}
+
+.not-found-row {
+  td {
+    width: 100%;
+  }
+}
+
+.link-home {
+  text-decoration: none !important;
+  text-transform: none;
+  color: $color-black !important;
+}

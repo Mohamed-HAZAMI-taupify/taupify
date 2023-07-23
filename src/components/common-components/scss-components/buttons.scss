@@ -1,0 +1,239 @@
+///// COLORS OF BUTTONS /////
+$transparent: transparent;
+$black: #000;
+$white: #fff;
+$grey: $color-gray-700;
+$soft-blue: $color-blue-100;
+$dark-blue: $color-blue-800;
+$yellow-white: $color-yellow-100;
+$info: #6d8fa9;
+$warning: $color-yellow-700;
+///// Boutton standard /////
+.btn-ev {
+  background-color: $white;
+  color: $black;
+  font-family: $font-cairo;
+  font-weight: 900;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 5px;
+  letter-spacing: 1px;
+}
+
+.btn-inscription-pop-up {
+  background-color: $black;
+  color: $white;
+  font-family: $font-cairo;
+  font-weight: 900;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 5px;
+  letter-spacing: 1px;
+}
+
+.btn-inscription-pop-up:hover {
+  background-color: $white;
+  color: $black !important;
+  border: solid 1px $black !important;
+}
+
+.btn-home-pop-up {
+  background-color: $black;
+  color: $white;
+  font-family: $font-cairo;
+  font-weight: 900;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 5px;
+  letter-spacing: 1px;
+}
+
+.btn-st {
+  font-family: $font-cairo;
+  font-weight: 900;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 5px;
+  letter-spacing: 1px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+///// Boutton centré /////
+.btn-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-content {
+  display: block;
+  width: max-content;
+}
+
+.btn-black {
+  background-color: $black;
+  color: $color-white;
+  border: 1px solid $white;
+}
+
+.btn-ev:hover {
+  background-color: $white;
+}
+
+.btn-home-pop-up:hover {
+  background-color: $white;
+  color: $black !important;
+  font-family: $font-cairo;
+  font-weight: 900;
+  font-size: 16px;
+  min-height: 40px;
+  margin: 5px;
+  letter-spacing: 1px;
+  border: solid 1px $black !important;
+}
+
+
+.hvr-warning:hover {
+  background-color: $warning;
+}
+
+.hvr-info:hover {
+  background-color: $info;
+  color: $white;
+}
+.hvr-transparent:hover {
+  background-color: transparent;
+  border: 1px solid $color-white;
+  color: $color-white;
+  z-index: 7;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid $color-white;
+  color: $color-black;
+}
+.btn-transparent:hover {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.hvr-line {
+  border: 2px solid transparent;
+  line-height: 36px;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: $color-blue-400;
+    content: " ";
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+      width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: $color-blue-400;
+      content: " ";
+      position: absolute;
+      top: 34px;
+      left: 0;
+    }
+  }
+}
+
+.btn-gradient {
+  // border-right: 0;
+  // max-height: 11px;
+  // padding: 20px 10px;
+  // text-align: center;
+  background: -webkit-linear-gradient(
+    to right,
+    $color-yellow-700,
+    $color-yellow-400
+  ) !important;
+  background: linear-gradient(
+    to right,
+    $color-yellow-700,
+    $color-yellow-400
+  ) !important;
+  // width: 100%;
+  // font-weight: bold;
+  // @media screen and (max-width: 700px) {
+  //   display: block;
+  //   width: 80%;
+  //   margin: 0 auto;
+  // }
+}
+
+.btn-gradient:hover {
+  background: -webkit-linear-gradient(
+    to right,
+    $color-yellow-400,
+    $color-yellow-900
+  ) !important;
+  background: linear-gradient(
+    to right,
+    $color-yellow-400,
+    $color-yellow-900
+  ) !important;
+  color: $color-black-700 !important;
+}
+.disabled{
+  background-color: #00000021;
+  cursor: not-allowed;
+  color: #fff;
+}
+.disabled:hover{
+  background-color: #00000021;
+}
+.btn-s {
+  width: 150px;
+}
+.btn-m {
+  min-width: 200px;
+}
+.btn-l {
+  width: 400px;
+
+  @media screen and (max-width: 600px) {
+    width: 250px;
+  }
+}
+
+.btn-md {
+  width: 250px;
+
+  @media screen and (max-width: 1250px) and (min-width: 575px) {
+    width: 120px;
+  }
+
+  @media screen and (max-width: 575px) {
+    width: 250px;
+  }
+}
+
+.btn-black {
+  background-color: $black;
+  color: $white;
+}
+.btn-black:hover {
+  background-color: $black !important;
+}
+.btn-hvr-content:hover span:after {
+  opacity: 1;
+  right: 0;
+}

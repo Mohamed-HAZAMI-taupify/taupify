@@ -1,0 +1,81 @@
+@import "./accordions/style.scss";
+@import "./add-admin-component-button/style.scss";
+@import "./carroussel-home/style.scss";
+@import "./image-loader/style.scss";
+@import "./infoRdvCoach/style.scss";
+@import "./input-toolbar/style.scss";
+@import "./modals/style.scss";
+@import "./not-found/style.scss";
+@import "./pop-up/styles.scss";
+@import "./pop-up-everest/style.scss";
+@import "./routing/content.scss";
+@import "./scss-components/style.scss";
+@import "./sidebar/style.scss";
+@import "./skeleton/style.scss";
+@import "./spinner-loanding/style.scss";
+@import "./Tooltip/style.scss";
+@import "./video-modal/style.scss";
+@import "./calendly-calendar/style.scss";
+@import "./carousel-card/style.scss";
+@import "./article-components/style.scss";
+@import "./admin-list/style.scss";
+@import "./chart-bar/style.scss";
+.add-component-button {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  background-color: $color-white-600;
+  color: $color-black;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border: solid $color-black 1px;
+}
+
+.container-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@font-face {
+  font-family: $font-gt-sectra-fine;
+  src: url(../../assets/fonts/GTSectraFineBook.ttf);
+}
+
+.join-us {
+  border: solid;
+
+  input {
+    width: 500px;
+  }
+
+  .aaa {
+    border: solid;
+  }
+
+  h2 {
+    border: solid;
+  }
+}
+
+.sign-up {
+  button {
+    border: solid;
+  }
+
+  border: solid;
+}
+
+.loader {
+  z-index: 10000;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

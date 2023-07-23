@@ -1,0 +1,41 @@
+@import "./analyse-prospect-type/style.scss";
+
+// .col-analyse {
+//   width: 48em;
+//   min-width: 35em;
+//   margin-bottom: 22px;
+
+//   @media screen and (min-width: 400px) and (max-width: 700px) {
+//     width: 365px;
+//     min-width: 300px;
+//   }
+//   @media screen and (max-width: 400px) {
+//     width: 310px;
+//     min-width: 300px;
+//   }
+// }
+.analyse-container{
+    .row{
+justify-content: center;
+.col-analyse{
+    width: 48em ;
+    min-width: 35em ;
+    margin-bottom: 22px;
+
+    .card{
+        border: none;
+        .card-header{
+            background-color: $color-white;
+            border: none;
+        }
+    }
+    @media screen and (min-width: 400px) and (max-width: 700px) {
+        width: 365px ;
+        min-width: 300px ;
+    }
+    @media screen and (max-width: 400px) {
+        width: 310px ;
+        min-width: 300px ;
+    }
+}}
+}

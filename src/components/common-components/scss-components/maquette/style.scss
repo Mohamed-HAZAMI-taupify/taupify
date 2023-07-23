@@ -1,0 +1,91 @@
+.maquette{
+    background-color: #c7dbf5;
+}
+.maquette-fonts{
+    font-family: $font-arial;
+    border-collapse: collapse;
+    width: 99%;
+    margin: 8px;
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        h5{
+            font-size: 14px;
+        }
+      }
+      
+   th{
+       font-size: 18px;
+       
+       font-family:$font-sans-serif;
+   }
+    .a{
+       font-family: $font-monospace;
+    }
+    .b{
+        font-family: $font-sans-serif;
+    }
+    .c{
+        font-family: $font-comic-sans-ms;
+    }
+    .d{
+        font-family: $font-cairo;
+    }
+    .e{
+        font-family: $font-cursive;
+    }
+    .f{
+        font-family: $font-circular;
+    }
+    .g{
+        font-family:$font-sectra-fine ;
+    }
+    .h{
+        font-family: $font-arial;
+    }
+    .i{
+        font-family: $font-roboto;
+    }
+    .j{
+        font-family: $font-montserrat;
+    }
+    .k{
+        font-family:$font-courier ;
+    }
+    .l{
+        font-family: $font-poppins;
+    }
+    .m{
+        font-family: $font-serif;
+    }
+    .n{
+        font-family: $font-bookman-old-style;
+    }
+    .o{
+        font-family: $font-cambria;
+    }
+    .p{
+        font-family: $font-gt-sectra-fine;
+    }
+    .q{
+        font-family: $font-raleway;
+    }
+    .r{
+        font-family: $font-anton;
+    }
+    .s{
+        font-family:$font-gill-sans ;
+    }
+    .t{
+        font-family:$font-oswald ;
+    }
+    .u{
+        font-family:$font-system-ui ;
+    }
+    .v{
+        font-family:$font-proxima-nova ;
+    }
+
+
+}

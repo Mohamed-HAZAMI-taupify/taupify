@@ -1,0 +1,47 @@
+.block-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -75px;
+  margin-bottom: 25px;
+  @media only screen and (max-width: 520px) {
+    margin-top: -100px;
+  }
+  .input-circular-image {
+    display: flex;
+  }
+  .image-container-fetch {
+    margin-top: 120px;
+    justify-content: center;
+    text-align: center;
+    height: 190px;
+  }
+  .image-container-circular-bordered {
+    height: 190px;
+    width: 190px;
+    .image-circular-bordered {
+      border-radius: 50%;
+      height: 250px;
+      width: 190px;
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+  .image-container-bordered {
+    img[src*="https://i.ibb.co"]
+    {
+      width: 100px;
+    }
+    img[src*="data:"] {
+      width: 50%;
+      margin-right: auto;
+      display: block;
+      margin-left: auto;
+      min-width: 150px;
+      height: 100%;
+
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+}

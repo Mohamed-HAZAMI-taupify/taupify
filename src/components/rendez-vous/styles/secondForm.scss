@@ -1,0 +1,48 @@
+.second-part-confirmation {
+  background-color: $color-white;
+
+  .text-deco-link {
+    text-decoration: none;
+  }
+}
+
+.date-time-text {
+  font-family: $font-proxima-nova !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+  word-break: break-word;
+  margin: 20 !important;
+}
+
+.display-color-text-confirmation {
+  display: unset;
+  color: $color-green-400;
+}
+
+.footer-text {
+  font-family: $font-proxima-nova;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-gray;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 15px;
+}
+
+.date-time-text-annulation {
+  font-family: $font-proxima-nova !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+  word-break: break-word;
+  margin: 20 !important;
+  text-decoration-line: line-through;
+  text-decoration-color: $color-red-900;
+}
+
+.display-color-text-annulation {
+  display: unset;
+  color: $color-red-900;
+}

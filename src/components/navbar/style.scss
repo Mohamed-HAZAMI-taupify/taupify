@@ -1,0 +1,277 @@
+@import "./collapse-menu/style";
+@import "./burger-menu/style";
+
+.nav-menu {
+  z-index: 100;
+  animation-name: show-nav;
+  animation-duration: 1s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $color-black;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .bottom-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    height: 50px;
+    .bottom-left {
+      display: flex;
+      align-items: center;
+      .everest-icon {
+        margin: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        @media (max-width: 1150px) {
+          margin: 10px 0;
+        }
+      }
+      .burger-wrapper {
+        margin: auto 0;
+        @media (min-width: 1100px) {
+          display: none;
+        }
+      }
+      @media (max-width: 1099px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .bottom-right {
+      display: flex;
+      height: 100%;
+      text-align: center;
+      .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        .navigation-logout {
+          color: $color-white;
+          .logout {
+            color: $color-white;
+          }
+        }
+      }
+      .nav-links {
+        list-style-type: none;
+        margin: auto 0;
+        & .link {
+          color: $color-dirty-white;
+          text-transform: uppercase;
+          border-bottom: 1px solid transparent;
+          margin: 0 1.5rem;
+          transition: all 1000ms linear 0s;
+          text-decoration: none;
+          .far {
+            color: $color-white;
+          }
+          &:hover {
+            color: $color-white;
+            border-bottom: 1px solid $color-white;
+          }
+
+          @media screen and(max-width: 1200px) and (min-width: 1100px) {
+            font-size: 11px;
+          }
+
+          @media (max-width: 1099px) {
+            display: none;
+            margin: auto 0;
+          }
+        }
+      }
+
+      .link:focus {
+        color: $color-white;
+        border-bottom: 1px solid $color-white !important;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        @media (max-width: 1099px) {
+          display: none;
+        }
+      }
+      .prendre-rdv-link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 8px;
+        .prendre-rdv {
+          color: $color-dirty-white;
+          background: none;
+          border: solid $color-white 1px;
+          min-height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 5px;
+
+          @media screen and(max-width: 1250px) and (min-width: 1100px) {
+            font-size: 10px;
+          }
+        }
+        @media (max-width: 1099px) {
+          display: none;
+        }
+      }
+
+      .rejoignez-nous {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: $color-black;
+        margin: 0 1.5rem;
+
+        .link {
+          margin: 0px;
+        }
+        .separation {
+          margin: 0px 5px 2px 5px;
+        }
+        @media (max-width: 1099px) {
+          display: none;
+        }
+      }
+      @media (max-width: 1099px) {
+        display: none;
+      }
+    }
+
+    button {
+      margin: auto auto auto 20px;
+      @media (max-width: 1099px) {
+        display: none;
+      }
+    }
+
+    & .far {
+      font-size: 25px;
+      @media (min-width: 1100px) {
+        display: none;
+      }
+    }
+
+    .clubs-link {
+      height: 35px;
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: 1099px) {
+      display: flex;
+      flex-direction: column;
+      align-items: cents;
+    }
+  }
+}
+
+.brand {
+  .desktop-icon {
+    width: 240px;
+    @media (max-width: 1099px) {
+      display: none;
+    }
+  }
+  .mobile-icon {
+    width: 170px;
+
+    @media (min-width: 1100px) {
+      display: none;
+    }
+  }
+}
+@keyframes show-nav {
+  from {
+    transform: translate3d(0, -10rem, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes subMenu {
+  0% {
+    opacity: 0;
+    top: -40px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 63px;
+  }
+}
+@keyframes link-animation {
+  0% {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.navigation-logout {
+  width: 100%;
+  background-color: $color-black;
+
+  i {
+    width: 25px;
+    float: left;
+    font-size: 16px;
+    padding-right: 5px;
+  }
+
+  .logout {
+    font-size: 0.8em;
+    font-family: $font-oswald;
+    position: relative;
+    //  right: -18px;
+    // bottom: -4px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity 0.45s;
+    -webkit-transition: opacity 0.35s;
+    color: $color-white;
+    padding-top: 2.5px;
+  }
+
+  .button {
+    text-decoration: none;
+    float: right;
+    padding: 2px;
+    margin: 5px;
+    color: $color-white;
+    width: 25px;
+    background-color: $color-black;
+    transition: width 0.35s;
+    -webkit-transition: width 0.35s;
+    overflow: hidden;
+  }
+
+  a:hover {
+    width: 100px;
+  }
+
+  a:hover .logout {
+    opacity: 0.9;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

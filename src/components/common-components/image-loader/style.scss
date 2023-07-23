@@ -1,0 +1,36 @@
+.spinner-color {
+  color: $color-green-400;
+}
+.skeleton-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 100%;
+  background-color: $color-white;
+  opacity: 1 !important;
+  .img-skeleton {
+    width: 400px !important;
+    height: 700px !important;
+  }
+
+  .img-skeleton-modal {
+    width: 400px !important;
+    height: 100% !important;
+  }
+}
+
+.MuiSkeleton-text {
+  height: auto;
+   transform: none !important; 
+  margin-top: 0;
+  border-radius: 4px;
+  margin-bottom: 0;
+  transform-origin: 0 60%;
+}
+
+.MuiSkeleton-root {
+  height: 1.2em;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.31) !important;
+}

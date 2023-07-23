@@ -1,0 +1,129 @@
+.footer {
+  padding: 0px 15px 15px 15px;
+  background: $color-black;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .fab {
+    font-size: 17px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0px;
+    @media screen and (max-width: 600px) {
+      width: 50%;
+    }
+
+    @media screen and (min-height: 860px) and (max-height: 940px) and (max-width: 450px) {
+      width: 40%;
+    }
+
+    @media screen and (min-height: 710px) and (max-height: 730px) and (max-width: 550px) {
+      width: 50%;
+    }
+
+    @media screen and (max-height: 737px) and (max-width: 420px) {
+      width: 40%;
+    }
+
+    @media screen and (min-height: 1000px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 950px) and (min-width: 756px) {
+      width: 85%;
+    }
+
+    li {
+      margin: 5px;
+    }
+  }
+
+  .extern-links {
+    .fab {
+      color: $color-white;
+    }
+    margin: 10px 0px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .link {
+    color: $color-white;
+    text-decoration: none;
+    border-bottom: none;
+    @media screen and (max-width: 755px) {
+      width: 100%;
+    }
+  }
+
+  .link:hover {
+    text-decoration: none;
+    color: $color-gray;
+  }
+}
+
+.plan-site,
+.conditions-generale-vente,
+.politique-conf,
+.mentions-legales {
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    height: 70vh;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 70px;
+    margin-right:2vw;
+    margin-left: 2vw;
+    font-size: 4.6em;
+    @media (max-width: 949px) {
+      font-size: 2.6em;
+    }
+  }
+
+  h3 {
+    font-size: 2.7em;
+    margin-top: 35px;
+  }
+
+  ol {
+    font-size: 1.2em;
+
+    li {
+      font-weight: bold;
+      margin: 10px 0px;
+    }
+  }
+
+  ul {
+    font-size: 0.9em;
+
+    li {
+      font-weight: normal;
+      margin: 15px 0px 10px 0px;
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-size: 1.2em;
+    text-align: start;
+  }
+
+  .description {
+    background-color: $color-white;
+    padding: 5% 10%;
+  }
+}

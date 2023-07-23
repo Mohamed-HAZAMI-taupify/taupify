@@ -1,0 +1,136 @@
+.myControlClassName {
+  width: fit-content;
+  border: 1px solid $color-white !important;
+  padding: 8px 27px 4px 7px !important;
+
+
+}
+.Dropdown-root{
+.Dropdown-menu{
+  right: 0;
+}}
+.myControlClassName:hover {
+  border: 1px solid $color-white-300 !important;
+  .myArrowClassName {
+    visibility: initial;
+  }
+}
+
+.myPlaceholderClassName {
+  font-size: 35px;
+}
+
+.myArrowClassName {
+  border-style: solid !important;
+  visibility: hidden;
+}
+
+.myMenuClassName {
+  font-size: 20px;
+  width: fit-content !important;
+}
+
+////////////////////////////////////////////
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: $color-black-700;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: $color-white;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px $color-black-700;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px $color-black-700;
+  }
+}
+///////////////////////////////////////
+
+.download-btn {
+  font-family: $font-monospace;
+  font-size: 15px;
+  height: 3em;
+  width: auto;
+  font-weight: 700;
+  text-align: center;
+  min-width: 280px;
+  min-width: max-content;
+  background-color: $color-black;
+  min-height: 40px;
+}
+
+///// Styling and transition of the Mail button STARTS /////
+
+.download-btn span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-family: $font-roboto;
+  font-size: 17px;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.download-btn-name {
+  color: $color-white-600;
+  margin-left: inherit;
+  margin-right: -22px;
+}
+
+.download-btn span:after {
+  content: "\2913";
+  position: 10px;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  padding: 20px;
+  text-align: center;
+}
+
+.download-btn:hover span {
+  padding-right: 25px;
+  text-align: center;
+}
+
+.download-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+  text-align: center;
+}

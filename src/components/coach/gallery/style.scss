@@ -1,0 +1,302 @@
+@import "./select-search-style/style.scss";
+@import "./coach-card/style.scss";
+
+.coach-container {
+  min-height: 90vh;
+}
+
+.coach-header {
+  margin-bottom: 60px;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.row {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.new-coach-title-xl {
+  font-size: 65px;
+  line-height: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: top;
+  font-family: $font-raleway;
+  color: $color-white;
+}
+
+@media screen and (max-width: 575px) {
+  .new-coach-title-xl {
+    font-size: 45px;
+    line-height: 40px;
+  }
+}
+
+.title-xl-margin {
+  margin-bottom: 1vw;
+}
+
+.text-regularr {
+  margin: 0 auto 60px;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: $font-montserrat;
+  padding-top: 50px;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 300;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  color: $color-white;
+  width: 60%;
+}
+
+@media screen and (max-width: 575px) {
+  .coach-header .text-regularr {
+    width: 90%;
+  }
+
+  .text-regularr span {
+    font-size: 3vw;
+    padding-top: 30px;
+  }
+}
+
+.coachgallery {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  margin-top: 20px;
+  color: $color-white;
+}
+
+.coachthumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.coachthumbnail {
+  // flex: 1 0 30%;
+  margin: 20px;
+  width: 30%;
+}
+
+.coachthumbnail img {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+
+@media screen and (max-width: 575px) {
+  .coachgallery {
+    padding: 20px;
+    padding-right: 60px;
+  }
+
+  .coachgallery .coachthumbnails {
+    display: block;
+  }
+
+  .coachthumbnails .coachthumbnail {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1210px) {
+  .coachgallery {
+    padding: 20px;
+  }
+  .coachthumbnails .coachthumbnail {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 850px) {
+  .coachgallery {
+    padding: 20px;
+  }
+  .coachthumbnails .coachthumbnail {
+    width: 100%;
+  }
+}
+
+.coach-footer {
+  text-align: center;
+}
+
+.title-bottom {
+  top: 0;
+  left: 0;
+  font-size: 10vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $color-white;
+  -webkit-transform: translateX(-5vw) translateZ(0);
+  -moz-transform: translateX(-5vw) translateZ(0);
+  transform: translateX(-5vw) translateZ(0);
+  z-index: 1;
+  opacity: 0.2;
+  position: relative;
+  left: 5%;
+  font-weight: bold;
+}
+
+.rdv-pop-up-link {
+  text-decoration: none;
+}
+
+.coach-pop-up-rdv {
+  font-size: 30px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  z-index: 10;
+  color: $color-white-800;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 102px;
+  width: 100%;
+  max-width: 1400px;
+  background-color: $color-black;
+
+  @media screen and (max-width: 575px) {
+    height: 150px;
+  }
+}
+
+.coach-pop-up-rdv-img {
+  height: fit-content;
+  width: 100%;
+  border-right: solid 1px $color-gray;
+}
+
+.titre-lg-pop-up-rdv {
+  font-size: 2.2vw;
+  line-height: 2vw;
+  text-transform: uppercase;
+  color: $color-orange-500;
+  font-family: $font-sectra-fine !important  ;
+  font-weight: 500;
+
+  @media screen and (max-width: 575px) {
+    font-size: 25px;
+    line-height: 2vw;
+    padding: 10px;
+    font-family: $font-sectra-fine !important ;
+  }
+}
+
+.titre-sm-pop-up-rdv {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $color-white;
+  font-family: $font-sectra-fine;
+}
+
+.col-2-pop-up-rdv {
+  padding: 15px;
+  text-align: center;
+  margin-left: 100px;
+  //padding-left: 50px;
+  @media screen and (max-width: 575px) {
+    margin-left: 0%;
+  }
+}
+
+.col-3-pop-up-rdv {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 575px) {
+    padding: 0%;
+  }
+
+  .rdv-pop-up-link-button {
+    text-decoration: none;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //   padding: 0px 20px;
+    background-color: $color-white;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0%;
+    margin-top: 20px;
+
+    @media screen and (max-width: 575px) {
+      margin-left: 20px;
+    }
+    span {
+      color: $color-black;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  button:hover {
+    background-color: $color-white;
+  }
+}
+
+.coach-pop-up-rdv-fab {
+  background-color: transparent !important;
+
+  @media screen and (max-width: 575px) {
+    background-color: transparent !important;
+  }
+}
+
+.col-1-pop-up-rdv {
+  padding-left: 0%;
+  padding-right: 0%;
+
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
+}
+
+.col-sm-5-rdv-pop-up {
+  padding-right: 0%;
+  @media screen and (max-width: 575px) {
+    margin: -20px;
+    padding: 0%;
+  }
+}
+
+.padding-right-pop-up-rdv {
+  padding-right: 0%;
+  padding-left: 0%;
+}
+
+.btn-rdv-coach {
+  width: 400px;
+
+  @media screen and (max-width: 700px) {
+    width: 250px;
+  }
+}

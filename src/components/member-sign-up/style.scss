@@ -1,0 +1,150 @@
+.coachcontainers-member {
+  position: relative;
+  margin: 0;
+  top: 10%;
+  background: $color-white-600;
+  font-size: 1.4em;
+  height: auto;
+  min-height: 80vh;
+}
+
+.member-inscrit {
+  min-height: 80vh;
+  height: auto;
+  position: relative;
+  margin: 0;
+  top: 20%;
+  background: $color-white-600;
+  padding-top: 150px;
+  width: 60%;
+}
+
+.alert2 {
+  color: $color-green-900 !important;
+}
+
+.sign-up-container {
+  width: 100%;
+  background-color: $color-white-600;
+
+  .inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+      margin: 125px auto 60px auto;
+      width: 66%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // align-items: left;
+
+      max-width: 1000px;
+      h2 {
+        font-size: 4em;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 10px;
+      }
+      .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 350px;
+        padding: 20px;
+        .input {
+          .alert {
+            margin-top: 2px;
+            left: 80px;
+            font-size: 1.17rem;
+            color: $color-red-500;
+          }
+          h3 {
+            font-family: $font-circular;
+          }
+          width: 50%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+          align-items: baseline;
+
+          @media (max-width: 949px) {
+            width: 100%;
+          }
+        }
+        .input-large {
+          .alert {
+            margin-top: 2px;
+            left: 80px;
+            font-size: 1.17rem;
+            color: $color-red-500;
+          }
+          h3 {
+            font-family: $font-circular;
+          }
+          width: 100%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+          align-items: baseline;
+
+          @media (max-width: 949px) {
+            width: 100%;
+          }
+        }
+
+        .button-large {
+          .alert {
+            margin-top: 2px;
+            left: 80px;
+            font-size: 1.17rem;
+            color: $color-red-500;
+          }
+          h3 {
+            font-family: $font-circular;
+          }
+          width: 100%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+          align-items: flex-end;
+
+          @media (max-width: 949px) {
+            width: 100%;
+          }
+        }
+
+        .upload-div {
+          h3 {
+            font-family: $font-circular;
+          }
+          width: 100%;
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          // align-items: flex-start;
+          align-items: center;
+
+          @media (max-width: 949px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: $color-black;
+}

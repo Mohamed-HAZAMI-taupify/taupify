@@ -1,0 +1,86 @@
+@import "./modal/style.scss";
+.card-email {
+  box-shadow: 0 0 3px $color-black;
+
+  .card-email-elt {
+    display: flex;
+    border-bottom: 1px solid $color-gray-900;
+    height: 9em;
+    align-items: center;
+    @media screen and (max-width: 400px) {
+      height: 12em;
+    }
+    .card-email-number {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $color-gray-900;
+      border-radius: 50%;
+      margin-left: 30px;
+      padding-top: 3px;
+      margin-right: 14px;
+
+      strong {
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        font-family: $font-poppins;
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+    .card-email-elt-p {
+      font-family: $font-montserrat !important;
+      font-size: small;
+      font-weight: 600;
+      color: $color-gray-700;
+    }
+
+    .card-email-elt-p::selection {
+      background-color: $color-yellow-400;
+    }
+    img {
+      width: 80px !important;
+      position: relative !important;
+      margin-left: auto !important;
+      left: -35px !important;
+      @media screen and (max-width: 500px) {
+        width: 34px !important;      }
+    }
+    .mail-icon {
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
+    }
+    .pointer-img {
+      cursor: pointer;
+      @media screen and (max-width: 400px) {
+        margin-top: 60px;
+        margin-right: auto;
+      }
+    }
+    .card-email-elt-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-left: 30px;
+      font-size: 24px;
+      @media screen and (max-width: 1000px) {
+        font-size: initial;
+      }
+      letter-spacing: 0.1em;
+    }
+    .card-email-elt-title::selection {
+      background-color: $color-gray-900;
+    }
+  }
+}
+.tooltip-mail {
+  width: 500px;
+}
+.send-email-btn {
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 80%;
+  img {
+    height: 100%;
+  }
+}

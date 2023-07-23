@@ -1,0 +1,80 @@
+.section-left-timer {
+  text-align: center;
+  padding-top: 70px;
+  width: 100%;
+
+  @media screen and (max-width: 1150px) {
+    display: none;
+  }
+}
+
+.image-modal {
+  padding-bottom: 50px;
+  @media screen and (max-width: 1150px) {
+    padding-bottom: 10px;
+  }
+}
+.timer-modal {
+  padding-bottom: 100px;
+}
+.Clock-container {
+  width: 100%;
+  color: white;
+  padding: 20px;
+  margin-left: 5px;
+}
+
+.col-row-timer {
+  padding-left: 20px !important;
+}
+
+.container-days {
+  width: 80px;
+  height: 80px;
+  background-color: #252525;
+  border-radius: 10%;
+  border: solid 2px #9b9b9b;
+  text-align: center;
+  align-self: center;
+  font-size: 50px;
+  padding-top: 14px;
+  line-height: 50px;
+}
+
+.days-text {
+  text-align: center;
+  font-size: 16px;
+  // padding: 20px;
+  color: rgb(247, 134, 114);
+  text-transform: uppercase;
+  padding-top: 10px;
+  
+}
+
+.jours-text {
+  padding-left: 12px;
+}
+
+.hour-text {
+  padding-left: 10px;
+}
+
+.minute-text {
+  padding-left: 8px;
+}
+
+.Clock-days {
+  width: 25%;
+}
+
+.Clock-hours {
+  width: 25%;
+}
+
+.Clock-minutes {
+  width: 25%;
+}
+
+.Clock-seconds {
+  width: 25%;
+}

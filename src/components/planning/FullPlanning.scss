@@ -1,0 +1,55 @@
+.explore-planning {
+  text-align: center;
+}
+.w_grid.no-gutter {
+  padding-left: 0;
+}
+.w_grid.no-gutter .grid-col {
+  padding-right: 0;
+}
+.explore-planning .grid-col {
+  position: relative;
+  padding: 5.5vw 0;
+}
+.explore-planning .text-fit {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  font-size: 10vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $color-black-700;
+  -webkit-transform: translateX(-5vw) translateZ(0);
+  -moz-transform: translateX(-5vw) translateZ(0);
+  transform: translateX(-5vw) translateZ(0);
+  z-index: 5;
+}
+.explore-planning-btn {
+  min-height: 40px;
+  text-align: center;
+  padding: 15px !important;
+  text-decoration: none !important;
+}
+
+.explore-planning .button {
+  position: relative;
+  z-index: 6;
+}
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: $color-black !important;
+    background: $color-white;
+    border: 1px solid rgba(255,255,255,0);
+    -webkit-transition: 550ms;
+    -moz-transition: 550ms;
+    transition: 550ms;
+    z-index: 7;
+  @media screen and (max-width: 1440px) {
+    padding: 1vw 2vw;
+  }
+  @media screen and (max-width: 700px) {
+    padding: 3vw 5vw;
+  }
+}

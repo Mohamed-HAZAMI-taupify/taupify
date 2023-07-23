@@ -1,0 +1,21 @@
+.skeleton-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  background-color: $color-white;
+  min-height: 90vh;
+}
+
+.img-skeleton {
+  width: 600px !important;
+  height: 700px !important;
+}
+
+.info-skeleton {
+  width: 700px !important;
+  height: 300px !important;
+  padding-left: 5px !important;
+  margin-left: 2px !important;
+}

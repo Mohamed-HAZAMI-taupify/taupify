@@ -1,0 +1,198 @@
+@import "./EmotionRate.scss";
+@import "./NoteRate.scss";
+@import "./StarRate.scss";
+@import "./SwitchRate.scss";
+.l-container {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding-top: 100px;
+
+  .brand-field {
+    height: 150px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 600px) {
+      height: 70px;
+    }
+    .brand-logo {
+      @media only screen and (max-width: 600px) {
+        width: 139px;
+        height: 19px;
+      }
+    }
+  }
+  .bg-m-size {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url("https://i.ibb.co/m4k8NZb/photo-web.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 5vh;
+    @media only screen and (max-width: 500px) {
+      background-image: url("https://i.ibb.co/7WWvfmD/Whats-App-Image-2021-12-08-at-10-15-11-1.jpg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+    }
+    .submit-button {
+      background-color: black;
+      color: #fff;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 25px;
+      padding: 0px 20px;
+      width: 400px;
+      height: 50px;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition-property: background-color;
+      transition-duration: 1s;
+      letter-spacing: 1px;
+      border: 1px black solid;
+      @media only screen and (max-width: 600px) {
+        width: 222px;
+      }
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+  .form-brand {
+    display: flex;
+    justify-content: center;
+
+    margin: 2vh 10vw;
+
+    h1 {
+      font-family: "sectra-fine";
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      font-size: 50px;
+      letter-spacing: -2px;
+      @media only screen and (max-width: 900px) {
+        font-size: 40px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 30px;
+      }
+    }
+  }
+  .form-body {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    .bg-form {
+      height: 100%;
+      background: white;
+      opacity: 0.9;
+      width: 80%;
+      @media only screen and (max-width: 600px) {
+        opacity: 0.7;
+      }
+      .extra-top-margin {
+        margin-top: 60px;
+      }
+      .underlined-title {
+        width: 80%;
+        margin: 0 10% 0 10%;
+        height: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-bottom: solid 1px black;
+        h2 {
+          text-transform: uppercase;
+          font-size: 22px;
+          font-weight: 650;
+          letter-spacing: 1.5px;
+          @media only screen and (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  i {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 60px;
+    height: 30px;
+    background-color: #6f6f6f;
+    border-radius: 5px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-color: #fff;
+      border-radius: 3px;
+      transform: translate3d(4px, 4px, 0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &:active {
+    i::after {
+      width: 28px;
+      transform: translate3d(4px, 4px, 0);
+    }
+
+    input {
+      &:checked + i::after {
+        transform: translate3d(16px, 4px, 0);
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+
+    &:checked + i {
+      background-color: #007c28;
+
+      &::after {
+        transform: translate3d(34px, 4px, 0);
+      }
+    }
+  }
+
+  &.neutral {
+    i {
+      background-color: #c5c5c5;
+
+      &::after {
+        transform: translate3d(19px, 4px, 0);
+      }
+    }
+  }
+}

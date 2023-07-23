@@ -1,0 +1,148 @@
+.section-cards {
+  .trainer-item-container:hover {
+    text-decoration: none;
+  }
+  .journal-title {
+    letter-spacing: 0.05em;
+    margin-left: 200px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: "Poppins";
+    padding: 25px 0 25px 0;
+    font-size: 28px;
+    font-weight: 700;
+    @media screen and (max-width: 670px) {
+      margin-left: 100px;
+    }
+    @media screen and (max-width: 400px) {
+      margin-left: 35px;
+    }
+  }
+  .container-journal-titles {
+    margin: 38px 30px 10px 30px;
+    color: $color-orange-500;
+  }
+  background-color: $color-white;
+  padding-bottom: 10px;
+  .MuiCard-root {
+    margin-right: auto;
+    margin-left: 0;
+    background-color: $color-black-800;
+    width: 22rem !important;
+    margin-bottom: 30px;
+    height: 330px;
+    cursor: pointer;
+      @media screen and (max-width: 670px) {
+      margin-left: 100px;
+    }
+    @media screen and (max-width: 400px) {
+      margin-left: 35px;
+    }
+    &:hover {
+      box-shadow: -6px 6px 7px 3px rgb(0 0 0 / 14%);
+      transition-duration: 500ms;
+      transition-property: box-shadow;
+    }
+    h5,
+    p {
+      color: $color-white-700;
+    }
+    h5 {
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 18px;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    p {
+      font-family: "sectra-fine";
+      font-size: 20px;
+    }
+    .lire-plus {
+      color: $color-orange-500;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: $color-orange-500;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover::after {
+        width: 100%;
+        left: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .react-multi-carousel-list {
+    margin-left: 190px;
+    margin-right: 2%;
+    @media screen and (max-width: 670px) {
+      margin-left: auto;
+    margin-right: auto;
+    }
+ 
+  }
+  .react-multiple-carousel__arrow--right {
+    right: 0 !important;
+  }
+  .react-multiple-carousel__arrow--left {
+    left: 0 !important;
+  }
+  .react-multiple-carousel__arrow {
+    border-radius: 0 !important;
+    min-width: 56px !important;
+    min-height: 52px !important;
+    background: $color-white-300 !important;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  .react-multiple-carousel__arrow:hover {
+    opacity: 0.9;
+    transition-duration: 500ms;
+    transition-property: opacity;
+  }
+  .react-multiple-carousel__arrow--right::before,
+  .react-multiple-carousel__arrow--left::before {
+    color: $color-black-700 !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+  }
+  .img-carousel-journal {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+  }
+  .journal-card {
+    box-shadow: 0px 0px 25px $color-blue-900 !important;
+    .profile-content {
+      background-color: $color-black-700;
+      color: $color-white-700 !important;
+      min-height: 200px !important;
+    }
+  }
+
+  .InfiniteCarousel {
+    margin-left: 25%;
+  }
+  .InfiniteCarouselArrowIcon {
+    padding: 8px !important;
+  }
+  .InfiniteCarouselArrow {
+    background-color: $color-white-700;
+    padding: 25px !important;
+  }
+}

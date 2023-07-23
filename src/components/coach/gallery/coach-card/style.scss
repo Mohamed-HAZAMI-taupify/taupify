@@ -1,0 +1,128 @@
+.coachthumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.trainer-item-container {
+  display: block;
+  position: relative;
+  color: $color-white;
+  overflow: hidden;
+  padding-bottom: 2vw;
+}
+
+.item-container-cover {
+  overflow: hidden;
+  display: block;
+
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+
+.trainer-item-container:hover {
+  display: block;
+  position: relative;
+  color: $color-white;
+  overflow: hidden;
+  padding-bottom: 2vw;
+
+  .item-container-cover {
+    -webkit-transform: scale(1.25); /* Safari and Chrome */
+    -moz-transform: scale(1.25); /* Firefox */
+    -ms-transform: scale(1.25); /* IE 9 */
+    -o-transform: scale(1.25); /* Opera */
+    transform: scale(1.25);
+  }
+}
+
+.trainer-item-container-cartouche {
+  position: absolute;
+  padding: 1vw 1.3vw;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  background: $color-black-700;
+  transition: 550ms cubic-bezier(0.32, 1.07, 0.67, 1);
+  text-align: start;
+  min-height: 150px;
+
+  @media screen and (max-width: 600px) {
+    min-height: auto;
+
+  }
+  .position-coach {
+    display: flex;
+    font-style: italic;
+    font-size: 14px;
+    .position-coach-icon {
+      width: 10px;
+      margin: 0px 10px auto 0px;
+      object-fit: contain;
+    }
+  }
+}
+
+.coach-list {
+  list-style-type: disc;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: top;
+  font-size: 14px;
+  font-family: $font-system-ui;
+  @media screen and (max-width: 575px) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 41px;
+  }
+}
+
+.coach-list li {
+  list-style: none;
+  display: inline;
+}
+.coach-list li::before {
+  content: " ";
+}
+.coach-list li:after {
+  content: " \00b7";
+}
+.coach-list li:last-child:after {
+  content: none;
+}
+
+.title-coach {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: $font-raleway;
+  font-size: 30px;
+}
+
+.trainer-item-container:hover {
+  .trainer-item-container-cartouche {
+    background: $color-white;
+    color: $color-black-700;
+  }
+  .position-coach {
+    color: $color-black-700;
+  }
+}
+@media screen and (max-width: 575px) {
+  .position-coach {
+    display: flex;
+    justify-content: center;
+  }
+}

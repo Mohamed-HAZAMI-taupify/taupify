@@ -1,0 +1,526 @@
+@import "../admin/main-view/lists/add/style.scss";
+@import "./analyse-prospect/style.scss";
+@import "./main-view/style.scss";
+
+
+.admin-page {
+  font-size: 1.4em;
+  min-height: 80vh;
+  .alert-success {
+    background-color: $color-yellow-700;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color: $color-black;
+    p {
+      margin-bottom: 0px;
+      margin-left: 5px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+  .react-datepicker-wrapper {
+    margin: 5.5em 6em;
+  }
+  .add-icon {
+    display: flex;
+    justify-content: flex-end;
+  
+    @media only screen and (max-width: 500px) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Styling the modals
+.modalStyle {
+  height: 830px;
+  margin-top: -6em;
+}
+
+.modalDetailStyle {
+  height: 720px;
+  margin-top: 0em;
+  min-width: 500px;
+}
+
+.modalMembreDetailStyle {
+  height: 520px;
+  margin-top: -9em;
+}
+
+.modalMemberUpdateStyle {
+  height: 650px;
+  margin-top: -9em;
+}
+
+@media only screen and (max-width: 1435px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .modalDetailStyle {
+    height: 720px;
+   // margin-top: auto;
+  }
+
+  .modalMembreDetailStyle {
+    height: 520px;
+    margin-top: 0em;
+  }
+
+  .modalMemberUpdateStyle {
+    height: 650px;
+    margin-top: 0em;
+  }
+}
+
+.button-ajouter {
+  font-size: 15px;
+  width: 12em;
+}
+
+.button-ajouter h1 {
+  font-family: -webkit-pictograph;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: $color-yellow-100;
+  padding-top: 4px;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+}
+.button-ajouter span {
+  height: auto;
+  padding-top: 5px;
+  color: $color-yellow-100;
+  font-size: 18px !important;
+  margin-right: 15px;
+}
+
+.table-striped tbody tr {
+  background-color: $color-black;
+}
+
+.button-analyse {
+  width: fit-content;
+  font-size: 10px;
+  font-weight: 900;
+  font-family: $font-monospace;
+  padding: 8px;
+  transition-duration: 0.4s;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+.button-prospect-tous {
+  background-color: $color-white;
+  color: $color-blue-800;
+}
+
+.button-prospect-tous:hover {
+  background-color: $color-blue-800;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.button-prospect-non-inscrits {
+  background-color: $color-white;
+
+  color: $color-blue-100;
+}
+
+.button-prospect-non-inscrits:hover {
+  background-color: $color-blue-100;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.button-prospect-inscrits {
+  background-color: $color-white;
+  color: $color-gray-700;
+}
+
+.button-prospect-inscrits:hover {
+  background-color: $color-gray-700;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.fixed_header {
+  tr {
+    font-family: $font-sans-serif;
+
+    display: flex;
+  }
+  .value,
+  .code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .numero-case {
+    width: 5%;
+  }
+  .edit-case {
+    width: 5%;
+  }
+  .date-case {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .fa-user-edit:hover {
+    color: $color-green-200;
+  }
+  .table thead th {
+    border-bottom: 0px;
+    border-top: 0px;
+  }
+  td,
+  th {
+    display: flex;
+    width: 18%;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 14px;
+    }
+  }
+  .big-part {
+    width: 35%;
+  }
+  .medium-part {
+    width: 20%;
+  }
+  height: fit-content;
+  overflow-y: hidden;
+  .table {
+    height: fit-content;
+    thead {
+      display: table;
+      background-color: $color-green-200;
+      table-layout: fixed;
+      width: 100%;
+    }
+    tbody {
+      overflow-y: auto;
+      display: block;
+      max-height: 27em;
+      tr:hover {
+        animation: tdanimation 1s infinite;
+        animation-direction: alternate;
+        animation-delay: 2s;
+        background-color: $color-gray-800;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .articles-table {
+    .big-part {
+      display: none;
+    }
+    td,
+    th {
+      width: 25%;
+    }
+  }
+}
+
+.add-modal-header {
+  background-color: $color-gray-900;
+  height: 3em;
+}
+
+.add-modal-header span {
+  color: $color-white-800;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: $font-comic-sans-ms;
+}
+
+.containerrss {
+  //  height: 200px;
+  position: relative;
+  margin: 0;
+  top: 10%;
+  background-color: $color-white-800;
+  font-size: 1.4em;
+  height: 80vh;
+}
+
+.vertical-centerrr {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.backg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+
+.card {
+  box-shadow: -8px 8px 14px 0 rgb(25 42 70 / 11%);
+  @media screen and (max-width: 500px) {
+    margin-bottom: 5px;
+  }
+  margin-top: 5px;
+}
+.card-header {
+  display: flex;
+ border: none;
+  color: $color-white-800;
+  justify-content: center;
+}
+
+
+.spans {
+  color: $color-black;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: $font-comic-sans-ms;
+  padding: 20px;
+}
+
+.shadow {
+  -moz-box-shadow: 5px 10px 14px 5px $color-black-800;
+  -webkit-box-shadow: 5px 10px 14px 5px $color-black-800;
+  box-shadow: 5px 10px 14px 5px $color-black-800;
+}
+
+.spanss {
+  color: $color-red-900;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $font-comic-sans-ms;
+  padding: 20px;
+}
+
+.pic-hour-card {
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
+}
+
+.container-admin {
+  margin-bottom: 2.2em;
+}
+
+///// styling the hover button STARTS /////
+.pc-button {
+  background-color: $color-white-800;
+  border: 2px solid transparent;
+  display: block;
+  margin-top: 3px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-blue-400;
+  letter-spacing: 0.3em;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: $color-blue-400;
+    content: " ";
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+      width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: $color-blue-600;
+      content: " ";
+      position: absolute;
+      top: 34px;
+      left: 0;
+    }
+  }
+}
+
+///// styling the hover button STARTS /////
+
+///// STYLING TOOLTIP ENDS /////
+
+tr:nth-of-type(even) {
+  td {
+    .edit-icon,
+    .trash-icon,
+    .search-icon {
+      color: $color-white;
+    }
+    .social-links {
+      .fab {
+        color: $color-white;
+      }
+    }
+  }
+}
+tr {
+  td {
+    .edit-icon :hover,
+    .trash-icon :hover,
+    .search-icon :hover {
+      color: $color-yellow-700;
+    }
+  }
+}
+
+///// styling TABLE STARTS /////
+.fixed_header,
+.fixed_header-archive,
+.fixed_header-prospect-test,
+.fixed_header-cat-prospect,
+.fixed_header-rdv,
+.fixed_header-coach {
+  tr {
+    display: flex;
+  }
+  tr:nth-of-type(even) {
+    background: $color-black;
+    td {
+      color: $color-white;
+    }
+  }
+  tr:nth-of-type(even):hover {
+    td {
+      .social-links {
+        .fab {
+          color: $color-black;
+        }
+      }
+      .social-links :hover {
+        .fab {
+          color: $color-yellow-700;
+        }
+      }
+      color: $color-black;
+    }
+    td {
+      .edit-icon,
+      .trash-icon,
+      .search-icon {
+        color: $color-black;
+      }
+    }
+  }
+
+  tr:nth-of-type(odd) {
+    td {
+      .edit-icon,
+      .trash-icon,
+      .search-icon {
+        color: $color-black;
+      }
+    }
+  }
+
+  td,
+  th {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    span {
+      font-size: 10px;
+      font-family: $font-sans-serif;
+      font-weight: 700;
+    }
+  }
+  th {
+    background: $color-black;
+    color: $color-yellow-100;
+  }
+  table {
+    height: fit-content;
+    thead {
+      display: table;
+      background: $color-white-600;
+      // background-image: linear-gradient(to right,  $color-white-600 , $color-white-600  100%) !important;
+      color: $color-black;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    tbody {
+      overflow-y: auto;
+      display: block;
+      max-height: 30em;
+
+      tr:hover {
+        animation: tdanimation 1s infinite;
+        animation-direction: alternate;
+        animation-delay: 0s;
+        background-color: $color-gray-800;
+
+        span:hover {
+          color: $color-yellow-700;
+        }
+      }
+    }
+  }
+  .social-links :hover {
+    .fab {
+      color: $color-yellow-700;
+    }
+  }
+}
+
+.voir-plus :hover {
+  color: $color-yellow-700;
+}
+///// styling TABLE STARTS /////
+
+.dropdown-menu-ajout,
+.dropdown-menu-mails {
+  background-color: $color-black;
+  border: 1px solid $color-gray-700;
+  width: 100%;
+
+  .dropdownItem {
+    color: $color-white;
+    font-size: 12px;
+    width: 80%;
+    text-transform: capitalize;
+    font-family: $font-arial;
+  }
+  .dropdownItem:hover {
+    color: $color-white;
+    background-color: $color-gray-200;
+    font-size: 12px;
+    width: 80%;
+  }
+}
+.analyse-prospect-header {
+  border: none;
+  .analyse-prospect-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 2px;
+    color: $color-blue-900;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}

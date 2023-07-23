@@ -1,0 +1,87 @@
+.coupon-card {
+  margin: 0 10% 0 10%;
+  background-color: $color-white;
+  border: none;
+  box-shadow: none;
+  .coupon-header {
+    background-color: $color-white;
+    padding-bottom: 0;
+    background-color: transparent;
+    border: none;
+    img {
+      width: 230px;
+      filter: grayscale(1) invert(1);
+    }
+  }
+  .coupon-body {
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    @media screen and (max-width: 1150px) {
+      display: contents;
+    }
+    .coupon-content {
+      float: right;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 40%;
+      color: $color-black;
+      @media screen and (max-width: 1150px) {
+        width: 100%;
+        z-index: 1;
+      }
+      .content-discount {
+        font-size: 28px;
+        text-transform: uppercase;
+        @media screen and (max-width: 1300px) {
+          font-size: 22px;
+        }
+        @media screen and (max-width: 550px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 16px;
+        }
+        .price-offer-container {
+          width: 100%;
+          text-align: center;
+          padding: 10px 0 11px 0;
+          .price,
+          .offer {
+            font-weight: 600;
+            font-family: $font-gt-sectra-fine;
+          }
+          .offer {
+            letter-spacing: 0.1em;
+            margin-left: 8px;
+          }
+        }
+      }
+      .content-footer {
+        width: 100%;
+        text-align: center;
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.25em;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+    }
+    .coupon-background {
+      width: 50%;
+      img {
+        position: absolute;
+        bottom: 0;
+        width: inherit;
+        filter: grayscale(1) invert(1);
+        @media screen and (max-width: 1150px) {
+          -webkit-filter: grayscale(1) invert(1);
+          filter: grayscale(1) invert(1);
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+}

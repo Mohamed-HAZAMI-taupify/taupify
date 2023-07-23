@@ -1,0 +1,49 @@
+.title-h2 {
+  font-family: $font-sectra-fine;
+  text-transform: uppercase;
+  padding-bottom: 10px !important;
+  letter-spacing: 1px;
+  line-height: 50px !important;
+}
+
+.title-p {
+  font-family: $font-sectra-fine;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  letter-spacing: 1.5px;
+  line-height: 40px !important;
+  padding-top: 30px;
+}
+
+.span-price {
+  color: $color-orange-500;
+  font-size: 40px;
+  font-family: $font-sectra-fine !important;
+  letter-spacing: 4px !important;
+}
+
+.div-btn-rentree-modal {
+  margin-top: -100px;
+  @media only screen and (max-width: 1150px) {
+    margin: 0;
+  }
+  button{
+    padding: 10px;  
+    border-radius: 8px;
+    @media only screen and (max-width: 1150px) {
+      margin-top: 30px;
+      padding: 0;
+    }
+  }
+}
+.pop-up-entree-message{
+  font-size: 17px;
+  font-weight: 100;
+  font-family: 'Cairo';
+  letter-spacing: 0.07em;
+  line-height: 30px;
+  margin: 15px 50px 0px 50px;
+  @media only screen and (max-width: 1150px) {
+    margin: 0;
+  }
+}

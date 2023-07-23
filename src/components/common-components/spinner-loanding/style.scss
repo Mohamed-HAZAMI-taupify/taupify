@@ -1,0 +1,38 @@
+.spinner-row {
+  display: flex;
+  justify-content: center;
+  .spinner-loading {
+    position: fixed;
+    bottom: 35vh;
+    z-index: 10;
+    animation: pulse 0.6s ease 0.3s infinite alternate;
+    .logo-planning {
+      @media screen and (max-width: 700px) { 
+        width: 135px;
+        margin-left: -17%;
+
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
+
+
+.center-div-spinner {
+  text-align: center;
+  margin-left: 40%;
+
+  @media screen and (max-width: 700px) {
+    margin-left: -17%;
+  }
+}

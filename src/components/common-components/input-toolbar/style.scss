@@ -1,0 +1,24 @@
+
+.section-editor{
+  margin-right: 18%;
+  margin-left: 18%;
+  @media (max-width: 1000px) {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+    .tox-statusbar{
+    display: none !important;
+  }
+  .tox-toolbar__group:last-child{
+    display: none !important;
+  }
+  .tox-split-button{
+    display: none !important;
+
+  }
+  .tox-toolbar{
+    flex-wrap: wrap;
+  }
+}
+
+  

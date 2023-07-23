@@ -1,0 +1,298 @@
+.rejoignez-nous {
+  width: 100%;
+  background-color: $color-white-600;
+
+  .first-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color-black;
+
+    @media screen and (max-height:500px) {
+      height: 100vh;
+    }
+
+    .rejoignez-nous-image {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
+    .bottom-direction {
+      text-decoration: none;
+      color: #fa8567;
+      position: relative;
+      opacity: 1;
+      z-index: 10;
+      border: none;
+      background-color: $color-white;
+      font-size: 20px;
+      font-weight: bold;
+      min-width: 190px;
+      line-height: 50px;
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+      text-transform: uppercase;
+
+      @media screen and (max-width : 1300px) and (min-width : 500px) {
+        font-size: 15px;
+        line-height: 50px;
+        min-width: 300px;
+      }
+
+      @media screen and (max-height : 600px) {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width : 500px) {
+        margin-bottom: 0;
+        line-height: 40px;
+        min-width: 230px;
+        font-size: 12px;
+      }
+    }
+
+    .bottom-direction:hover {
+      transition: background-color 2s;
+      background-color: white;
+    }
+
+    .join-us-title {
+      max-width: 1600px;
+      font-family: $font-sectra-fine;
+      padding-top: 50px;
+      font-size: 3em;
+      line-height: 1.9;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 949px) and (min-width:500px) {
+        font-size: 3em;
+        max-width: 400px;
+        margin: 0 4vw;
+        line-height: 1.8;
+      }
+
+      @media screen and (max-width: 500px) {
+        font-size: 17px;
+        line-height: 1.9;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      @media screen and (max-height: 400px) {
+        font-size: 3em;
+        margin-top: 30vh;
+      }
+
+      @media screen and (max-height: 609px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 570px;
+        height: auto;
+      }
+    }
+
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      color: $color-white;
+    }
+
+    button {
+      z-index: 10;
+      margin: 25px;
+      border: none;
+      background-color: $color-white;
+      font-size: 15px;
+      font-weight: bold;
+      min-width: 190px;
+      line-height: 50px;
+      width: 20%;
+    }
+
+    .description {
+      background-color: $color-gray-800;
+      z-index: 10;
+      width: 70%;
+      text-align: center;
+      max-width: 700px;
+      min-width: 350px;
+      height: 45vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: 5em;
+        margin: auto;
+      }
+
+      p {
+        font-size: 2em;
+        margin: 10px;
+      }
+    }
+  }
+
+  .inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      width: 100%;
+    }
+
+    .form {
+      margin: 125px auto 60px auto;
+      width: 66%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 949px) {
+        width: 100%;
+      }
+
+      .inscription-description {
+        font-size: 4em;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 600px) {
+          font-size: 2em;
+        }
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 10px;
+      }
+
+      .input-checkbox {
+        text-align: center;
+
+        .input-label {
+          font-size: 1rem;
+          font-family: $font-roboto;
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: 0.00938em;
+          text-transform: none;
+          padding: 10px;
+        }
+      }
+
+      .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 270px;
+
+        .input {
+          .input-checkbox {
+            display: flex;
+            justify-content: center;
+
+            .input-label {
+              font-size: 1rem;
+              font-family: $font-roboto;
+              font-weight: 400;
+              line-height: 1.5;
+              letter-spacing: 0.00938em;
+              text-transform: none;
+              padding: 10px;
+            }
+          }
+
+          .alert {
+            margin-top: 2px;
+            font-size: 1.17rem;
+            color: $color-red-500;
+          }
+
+          width: 50%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @media screen and (max-width: 949px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.required-label-info-div {
+  position: relative;
+  left: -190px;
+  top: 60px;
+
+  @media screen and (max-width: 1150px) {
+    left: -290px;
+    top: 60px;
+  }
+
+  @media screen and (max-width: 780px) {
+    left: -290px;
+    top: 30px;
+  }
+
+  @media screen and (max-width: 715px) {
+    left: -190px;
+    top: 35px;
+  }
+
+  @media screen and (min-width: 350px) and (max-width: 600px) {
+    left: -100px;
+    top: 35px;
+  }
+
+  @media screen and (max-width: 350px) {
+    left: -80px;
+    top: 35px;
+  }
+}
+
+.required-label {
+  color: $color-red-500;
+  font-size: 14px;
+}
+
+.rejoignez-nous-button {
+  background-color: $color-black;
+  border: none;
+  height: 40px;
+  width: 250px;
+  margin: 20px;
+
+  .rejoignez-nous-button-span {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

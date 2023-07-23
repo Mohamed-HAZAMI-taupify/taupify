@@ -1,0 +1,704 @@
+.member-page {
+  background-color: $color-white-600;
+  font-size: 1.4em;
+  min-height: 80vh;
+}
+
+.form {
+  width: 100%;
+}
+
+.infos-after-card {
+  font-family: $font-montserrat;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  max-width: 50em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding-top: 50px;
+}
+.im-bold {
+  font-weight: 900;
+}
+
+.card-session {
+  margin-bottom: 10px;
+  box-shadow: -1px 2px 4px 0px $color-gray-900;
+}
+.btn-edit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-supp-compte {
+  display: flex;
+  justify-content: flex-end;
+  font-family: $font-raleway;
+  color: $color-gray-500;
+  margin-top: -2em;
+  margin-bottom: 2em;
+  cursor: pointer;
+
+  @media (max-width: 750px) {
+    margin-top: -30px;
+    font-size: 10px;
+  }
+}
+///// Styling the cover STARTS /////
+.container-fluid {
+  margin: auto;
+  width: 90%;
+  padding: 1.5rem;
+}
+
+.container-member-space {
+  width: 100%;
+  padding-top: 102px;
+}
+
+.profile-section,
+[className*="profile-section-"] {
+  position: relative;
+  top: 5px;
+  padding-bottom: 0;
+  padding-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.profile-nav-2 {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+
+  .profile-nav-button {
+    width: inherit;
+    outline: none;
+    height: 100%;
+    border-radius: 0%;
+  }
+
+  .profile-nav-button:hover {
+    background-color: #eee;
+    opacity: 0.5;
+  }
+
+  #active-profile-nav-button {
+    background-color: #eee;
+    color: black;
+  }
+}
+
+#active-btn-session-reserved {
+  background: linear-gradient(to right, #d4dc2e, #e6e692) !important;
+  color: $color-black !important;
+}
+
+.btn-session-reserved {
+  background-color: transparent !important;
+  color: $color-black !important;
+}
+
+.col-x {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2%;
+}
+
+@media only screen and (max-width: 1650px) {
+  .col-x {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 1330px) {
+  .input-info {
+    height: 7em;
+    width: 1em;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.h3-info {
+  font-family: $font-montserrat;
+  letter-spacing: 0.1rem;
+  color: grey;
+  @media (max-width: 450px) {
+    font-size: 15px;
+  }
+}
+
+.inputs-info {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-white-600;
+  margin-bottom: 50px;
+  width: 100%;
+
+  .input-info {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 50%;
+
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
+  }
+}
+
+.form-cb {
+  display: flex;
+  .drom-cb-div {
+    text-align: center;
+    margin-top: 100px;
+    @media (max-width: 1250px) {
+      margin-top: 60px;
+    }
+    .drom-cb-div-h3 {
+      font-family: $font-raleway;
+      color: $color-blue-900;
+      display: flex;
+      justify-content: center;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      font-size: 25px;
+
+      @media (max-width: 1250px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.container-cb {
+  background-color: $color-white-600;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.btn-circle {
+  border-radius: 50%;
+  background: none;
+  border: 1px dashed $color-white-300;
+}
+
+.plus-icon {
+  display: flex;
+}
+.container-swipe-add {
+  display: flex;
+  align-items: center;
+}
+.add-cb {
+  font-family: $font-montserrat;
+  letter-spacing: 0.1em;
+  font-size: x-small;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-left: 2.1em;
+  margin-top: 25px;
+}
+
+.choose-cb {
+  font-family: $font-montserrat;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: x-small;
+  text-transform: uppercase;
+  padding-left: 2.1em;
+  color: $color-gray-500;
+  margin-top: 25px;
+}
+
+.draw-cb {
+  transition: color 0.25s;
+  text-align: center;
+  background: none;
+  border: 1px dashed $color-white-600;
+  box-sizing: border-box;
+  width: 22em;
+  height: 10em;
+  font-family: $font-montserrat;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: initial;
+  font-weight: 900;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: $color-gray;
+
+  // Required, since we're setting absolute on pseudo-elements
+  position: relative;
+  vertical-align: middle;
+  @media (max-width: 450px) {
+    width: 15em;
+  }
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  &:hover {
+    color: $color-black;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+    border-width: thin;
+  }
+
+  &:hover::before {
+    border-top-color: $color-gray-800; // Make borders visible
+    border-right-color: $color-gray-800;
+    transition: width 0.15s ease-out,
+      // Width expands first
+      height 0.15s ease-out 0.15s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: $color-gray-800; // Make borders visible
+    border-left-color: $color-gray-800;
+    transition: border-color 0s ease-out 0.3s,
+      // Wait for ::before to finish before showing border
+      width 0.15s ease-out 0.3s,
+      // And then exanding width
+      height 0.15s ease-out 0.4s; // And finally height
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.title-member {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-family: $font-montserrat;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  color: $color-gray-700;
+  letter-spacing: 3px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
+}
+
+.icon-member-space {
+  font-size: 25px !important;
+  color: #63686e !important;
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.9em !important;
+  }
+}
+
+.subtitle-member {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-family: $font-montserrat;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  color: $color-gray-900;
+  letter-spacing: 3px;
+  line-height: 3rem;
+
+  @media (max-width: 650px) {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+
+    display: block;
+  }
+}
+
+$coverImageHeight: 350px;
+
+.card-box {
+  background: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px $color-black-900;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-box {
+  background: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px $color-black-900;
+  position: relative;
+  overflow: hidden;
+
+  .profile-picture {
+    position: absolute;
+    top: $coverImageHeight - 60px;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+
+    img {
+      border: 5px solid $color-white;
+      border-radius: 100%;
+      box-shadow: 0 0 4px $color-black-800;
+      width: 200px;
+      height: 200px;
+      background-color: $color-gray;
+    }
+  }
+}
+
+.infos-perso-content {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.title-membership-card {
+  font-size: 1.5rem;
+  font-family: $font-montserrat;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: $color-gray-700;
+  letter-spacing: 3px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-membership-card {
+  font-size: 1.7rem;
+  font-family: $font-anton;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: $color-black;
+  letter-spacing: 3px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-cover-image {
+  height: $coverImageHeight;
+  overflow: hidden;
+  background-color: $color-black;
+
+  @media (max-width: 650px) {
+    height: 200px;
+  }
+
+  img {
+    width: 100%;
+
+    @media (max-width: 650px) {
+      height: 200%;
+      width: 200%;
+    }
+  }
+}
+
+.profile-content {
+  padding: 40px 20px;
+  text-align: center;
+
+  h1 {
+    font-weight: normal;
+    margin-bottom: 0.2em;
+  }
+}
+
+///// Styling the cover ENDS /////
+
+.navigation-buttons {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.profile-content .member-name {
+  font-weight: 900 !important;
+  font-size: 35px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  .member-nom {
+    text-transform: uppercase;
+  }
+}
+
+///// styling the hover button STARTS /////
+
+///// styling the hover button STARTS /////
+
+.reservation-cta-member .button-reservation-member {
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  font-size: 11px;
+  background-color: $color-black;
+  color: $color-white;
+  border: 1px solid $color-black;
+  text-transform: uppercase;
+  font-weight: 900;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.reservation-cta-member .button-reservation-member:hover {
+  background-color: $color-white;
+  color: $color-black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.reservation-cta-member .button-reservation-member:hover {
+  background-color: $color-white;
+  color: $color-black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.reservation-cta_quit-member .center {
+  justify-content: center;
+}
+.reservation-cta_quit-member {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation-cta-member {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title_m-member {
+  font-size: 18px;
+  font-weight: 900;
+  padding-bottom: 15px;
+}
+
+.asterisk {
+  color: $color-red-900;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.required-input {
+  color: $color-black-900;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.profile-icons {
+  font-size: 15px;
+}
+.profile-icons-xxl {
+  font-size: 30px;
+  color: $color-gray-700;
+}
+.profile-icons-xl {
+  font-size: 25px;
+  color: $color-gray-900;
+  padding: 3px;
+}
+.plus-circle {
+  color: $color-gray;
+}
+.filled-password {
+  font-size: 20px;
+  max-width: 40em;
+}
+
+.MuiFilledInput-root {
+  position: relative;
+  background-color: transparent !important;
+  font-size: 2rem !important;
+}
+
+.MuiFilledInput-input {
+  padding: 0px 0px 10px !important;
+}
+
+.profile-card {
+  width: 500px;
+}
+.card-subscription {
+  height: 13;
+  background: $color-white-500;
+  position: relative;
+}
+.card-subscription-footer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: $color-white;
+  bottom: 0;
+}
+.card-subscription-price {
+  position: absolute;
+  width: 50%;
+  height: 3.5em;
+  background-color: $color-blue-900;
+  bottom: 0;
+  color: $color-white;
+}
+
+.card-subscription-container {
+  width: fit-content;
+}
+.profile-nav-group {
+  display: flex;
+  background-color: $color-white-600;
+  flex-wrap: wrap;
+  min-height: 100px;
+  margin-top: 20px;
+  .desktop {
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+  .mobile {
+    font-size: 25px;
+
+    @media (min-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.navbar-profile {
+  min-height: 80px;
+  width: 100%;
+  color: $color-black;
+  display: flex;
+  background-color: $color-white;
+  flex-wrap: wrap;
+  padding-left: 15%;
+  padding-right: 15%;
+
+  @media screen and(max-width: 1400px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media screen and(max-width: 700px) {
+    padding-left: 0%;
+    padding-right: 0%;
+    flex-direction: column;
+  }
+}
+
+.card-subscription-group {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 25px;
+}
+.subscription-details {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 10rem;
+}
+.subscription-detail {
+  display: flex;
+  h1 {
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    color: $color-blue-900;
+  }
+  span {
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    color: $color-blue-900;
+  }
+}
+.subscription-title {
+  font-family: $font-raleway;
+  color: $color-blue-900;
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: 25px;
+}
+.card-subscription-price {
+  color: $color-yellow-100;
+  font-family: $font-raleway;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-sessions-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.civilite-select-input {
+  margin-top: 15px;
+}
+
+
+

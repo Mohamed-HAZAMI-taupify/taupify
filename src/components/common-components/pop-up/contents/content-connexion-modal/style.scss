@@ -1,0 +1,129 @@
+.modal-right-cnx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+  background-color: black;
+  margin-bottom: 0;
+  @media (max-width: 1150px) {
+    width: 100%;
+  }
+
+  .alert-login {
+    font-size: 10px;
+    color: rgb(255, 72, 72);
+    text-align: right;
+    height: 15px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form {
+    margin: 0px;
+    width: 100%;
+    .cnx-title {
+      margin-top: 45px;
+      margin-bottom: 25px;
+      font-family: "sectra-fine";
+      font-size: 34px;
+      font-weight: bold;
+      line-height: 23px;
+      color: white;
+    }
+    p {
+      font-size: 14px;
+      color: white;
+    }
+    button {
+      border-radius: 5px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        color: black;
+        font-size: 12px;
+      }
+    }
+    .inputs .input .alert {
+      left: 0px;
+    }
+    .cnx-inputs {
+      width: 100%;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      flex-wrap: wrap;
+      .cnx-input {
+        color: white !important;
+        width: 70%;
+        .alert {
+          font-size: 13px;
+          color: rgb(255, 1, 1);
+        }
+        .required-label {
+          color: $color-red-500;
+          font-size: 14px;
+        }
+        .MuiFormControl-root {
+          width: 100%;
+          .MuiInputBase-input {
+            color: white !important;
+            font-size: 2em;
+            line-height: 40px;
+            height: 27px;
+            padding: 0px;
+            color: white;
+          }
+          .MuiInputBase-multiline {
+            line-height: 40px;
+            padding: 0px;
+            height: 27px;
+          }
+          .MuiInputBase-input {
+            color: white !important;
+            font-size: 2em;
+            line-height: 40px;
+            height: 27px;
+            padding: 0px;
+            color: white;
+            width: 23em;
+            @media (max-width: 1150px) {
+              width: 12em;
+            }
+          }
+          .MuiInput-underline:after {
+            border-bottom: 1px solid #a8cfbd;
+            color: white !important;
+          }
+          .MuiInput-underline:before {
+            border-bottom: 1px solid white;
+          }
+        }
+        h3 {
+          font-family: sans-serif;
+          color: white;
+        }
+        @media (max-width: 1150px) {
+          padding: 10px;
+        }
+      }
+    }
+    .subscribe-link {
+      display: grid;
+      .cnx-extra-link {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        height: 24px;
+        span {
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+}

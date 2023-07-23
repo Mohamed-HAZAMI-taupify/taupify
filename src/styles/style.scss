@@ -1,0 +1,100 @@
+@import "./common-style/settings.scss";
+@import "../components/join-us/style.scss";
+@import "../components/admin/style.scss";
+@import "../components/admin-login/style.scss";
+@import "../components/calendar/style.scss";
+@import "../components/catalog-planning/style.scss";
+@import "../components/catalog/style.scss";
+@import "../components/club-besancon/styles/style";
+@import "../components/common-components/style.scss";
+@import "../components/contact-us/style.scss";
+@import "../components/coupon/style.scss";
+@import "../components/experience/styles.scss";
+@import "../components/export-data-xlsx/styles.scss";
+@import "../components/footer/style.scss";
+@import "../components/forget-password/style.scss";
+@import "../components/journal/style.scss";
+@import "../components/member/style/Style.scss";
+@import "../components/member-sign-up/style.scss";
+@import "../components/navbar/style.scss";
+@import "../components/coach/style.scss";
+@import "../components/planning/Style.scss";
+@import "../components/print-to-pdf/style.scss";
+@import "../components/rendez-vous/styles/style.scss";
+@import "../components/reservation/style.scss";
+@import "../components/reset-password/style.scss";
+@import "../components/studio/styles/style";
+@import "../components/unsubscribe/style.scss";
+@import "~@sweetalert2/theme-material-ui/material-ui.scss";
+@import "../components/common-components//upload-photo//style.scss";
+@import "../components/become-coach/style.scss";
+@import "../components/contest-game/style.scss";
+@import "../components/common-components/location-our-club-activity/style.scss";
+@import "../components/location-our-club/style.scss";
+@import "../components/feedback-form/style.scss";
+@import "../components/contest-form/style.scss";
+@import "../components/formulaire-everest/style.scss";
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  body {
+    box-sizing: border-box;
+    font-family: $font-poppins;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.38889;
+    color: $color-black;
+    text-align: left;
+    background-color: $color-black;
+    font-weight: 400;
+    section {
+      margin-bottom: 10px;
+    }
+    p {
+      font-weight: lighter;
+      font-weight: 400;
+    }
+    h2 {
+      font-family: $font-poppins;
+      font-weight: 400;
+    }
+    h3 {
+      font-family: $font-poppins;
+      font-weight: 400;
+    }
+    h4 {
+      font-family: $font-poppins;
+      font-weight: 400;
+    }
+    span {
+      font-family: $font-poppins;
+      font-weight: 400;
+    }
+  }
+}
+
+.swal2-html-container {
+  font-size: 1.35em;
+}
+.swal2-styled.swal2-confirm,
+.swal2-styled.swal2-cancel {
+  font-size: 1.2em;
+}
+.swal2-actions {
+  justify-content: center;
+}
+
+.desktop-img {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.mobile-img {
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+}
+

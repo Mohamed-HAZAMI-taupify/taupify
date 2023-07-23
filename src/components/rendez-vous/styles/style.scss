@@ -1,0 +1,385 @@
+@import "./firstForm.scss";
+@import "./secondForm.scss";
+.containerrrs {
+  position: relative;
+  margin: 0;
+  top: 10%;
+  background-color: $color-white-800;
+  font-size: 22px;
+  height: auto;
+  min-height: 90vh;
+}
+
+.galllery {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.marg {
+  margin-bottom: 1px;
+  padding: 1px;
+
+  .alert-font-size {
+    font-size: 14px !important;
+  }
+}
+
+.marg-top {
+  margin-top: 20px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.divider {
+  margin: 50px;
+}
+
+.DayPicker-Month {
+  height: auto;
+  font-size: 17px;
+  width: auto;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  @media screen and (max-width: 450px) {
+    height: auto;
+    font-size: 12px;
+    width: auto;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+.DayPicker-Day {
+  display: table-cell;
+  padding: 13px !important;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+.DayPicker {
+  font-family: auto !important;
+}
+
+.row-down {
+  .row {
+    padding-right: 0px;
+    padding-left: 15px;
+    margin-left: 0px;
+    margin-right: -15px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: -15px;
+    margin-right: 15px;
+  }
+}
+
+.row-time {
+  .row {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: -15px;
+    margin-right: -10px;
+  }
+}
+
+.row-time-overflow {
+  overflow: hidden;
+  min-height: 430px;
+}
+
+.row-formulaire {
+  min-height: 430px;
+  .row {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.rdv-div-btn-submit {
+  float: right;
+  .rdv-btn {
+    width: 100%;
+    min-width: 200px;
+    font-size: 18px !important;
+  }
+}
+
+.rdv-div-btn-margin {
+  margin: 0 !important;
+}
+
+.rdv-div-btn {
+  float: right;
+  @media screen and (max-width: 500px) {
+    margin-top: 50px;
+    // float: none;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    margin-right: 0px;
+  }
+  .rdv-btn {
+    width: 100%;
+    min-width: 200px;
+    font-size: 18px !important;
+  }
+}
+
+.rdv-div-btn-annuler {
+  // float: right;
+  // margin-right: -30px;
+  @media screen and (max-width: 500px) {
+    float: none;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    margin-right: 0px;
+  }
+  .rdv-btn {
+    width: 100%;
+    min-width: 200px;
+  }
+}
+
+.div-annulation {
+  padding: 10px;
+  .textarea {
+    border: 1px solid;
+    height: 92px;
+    width: 100%;
+    padding: 5px;
+  }
+  .span {
+    margin: 20px;
+  }
+}
+
+.margin-second-col-annulation {
+  margin-top: 20px;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+  background-color: $color-blue-100 !important;
+  color: $color-white-700;
+}
+.calendly-inline-widget {
+  height: calc(100vh - 0px);
+  border: "solid";
+}
+
+.thumbnailsss {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.thumbnaillll {
+  flex: 1 0 33%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: auto;
+  min-height: 500px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  .ArrowBackIcon-size {
+    width: 2em !important ;
+    height: 2em !important;
+  }
+
+  .card {
+    padding: 0;
+    .div-card-thumbnail {
+      height: 100%;
+      text-align: center;
+    }
+  }
+
+  .card-body-row {
+    margin-top: 30px;
+
+    .card-body-fisrt-col {
+      border-right-style: "solid";
+      border-right-width: "1px";
+      border-right-color: $color-white-600;
+    }
+  }
+
+  .card-body-fisrt-row {
+    border-right-style: "solid";
+    border-right-width: "1px";
+    border-right-color: $color-white-600;
+  }
+}
+
+.lefth2 {
+  line-height: 1.5 !important;
+  font-weight: bold;
+  text-align: left !important;
+  color: var(--text-color, $color-gray-800);
+}
+
+.lefth2-font-size {
+  font-size: 35px;
+}
+
+.calendly-container {
+  position: relative;
+  margin: 0;
+  top: 10%;
+  background-color: $color-white-800;
+  font-size: 22px;
+}
+
+.stepperthumbnaillll {
+  flex: 1 0 33%;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: auto;
+}
+
+.scrolltemps {
+  max-height: 380px;
+  overflow: auto;
+  padding: 20px;
+
+  .button-margin {
+    margin: 10px !important;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-white-600;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-gray-500;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-gray-800;
+}
+
+.time-rdv-btn {
+  width: 90%;
+  font-size: 16px !important;
+}
+
+.time-rdv-btn:focus {
+  background-color: $color-blue-100;
+  color: $color-white-700;
+}
+
+.prdv {
+  font-family: $font-proxima-nova !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  font-weight: bold;
+  text-align: left !important;
+  color: $color-gray-500;
+  word-break: break-word;
+  margin: 20 !important;
+}
+
+.prdv-color {
+  color: $color-blue-100 !important;
+}
+
+.prdv-take-rdv {
+  color: $color-blue-100 !important;
+  display: unset;
+}
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+  button {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.suivantbtn {
+  min-width: 150px;
+  width: 100%;
+}
+
+.precbtn {
+  width: 150px;
+  background: $color-white-600;
+  color: $color-black;
+}
+
+@media screen and (max-width: 450px) {
+  .suivantbtn {
+    width: 100%;
+  }
+  .precbtn {
+    width: 100vh;
+  }
+  .alignright {
+    text-align: center;
+    float: none;
+    display: block;
+  }
+  .alignleft {
+    float: none;
+
+    //  width: 100vh;
+  }
+  .textboxx {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.MuiFormLabel-root {
+  color: $color-black-900;
+  padding: 0;
+  font-size: 3rem;
+  font-family: $font-roboto;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.00938em;
+}
+
+.heurec {
+  font-family: $font-proxima-nova;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-gray-800;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.suivantbtnn {
+  width: auto;
+}

@@ -1,0 +1,84 @@
+.entry-pop-up-container {
+  position: absolute;
+  min-height: 50px;
+  background-color: #fa8567;
+  color: black;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  margin-bottom: -10px;
+  margin-top: 50px;
+  @media screen and (max-width: 1099px) {
+    font-family: 16px;
+    margin-top: 42px;
+
+  }
+
+  .entry-h3-web {
+    padding-top: 15px;
+    font-family: $font-sectra-fine;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin: 0 2vw;
+    @media screen and (max-width: 900px) and (min-width: 700px) {
+      padding-top: 5px;
+    }
+    @media screen and (max-width: 1140px) and (min-width: 900px) {
+      padding-top: 7px;
+    }
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+
+    .number-family-size {
+      font-size: 18px;
+    }
+
+    .espace-spans {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .span-inscription {
+      text-transform: uppercase;
+      .link-inscription {
+        text-decoration: none !important;
+        color: black;
+      }
+    }
+  }
+
+  ////////////// mobile
+  .entry-h3-mobile {
+    font-family: "sectra-fine";
+    text-transform: uppercase;
+    display: none;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 2vw;
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+
+    .first-span {
+      font-size: 12px;
+    }
+    .number-family-size {
+      font-size: 12px;
+    }
+
+    .span-inscription {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      .link-inscription {
+        text-decoration: none !important;
+        color: black;
+      }
+    }
+  }
+}

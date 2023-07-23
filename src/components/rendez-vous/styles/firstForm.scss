@@ -1,0 +1,44 @@
+.first-part-confirmation {
+  background-color: $color-white-800;
+
+  .cancelButton {
+    width: 50px;
+    height: 50px;
+    color: $color-green-400;
+    margin-top: 50px;
+  }
+}
+
+.upper-text {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: $font-serif;
+}
+
+.upper-text-weight {
+font-weight: 600;
+}
+
+.paragraph-grey {
+  color: $color-gray;
+}
+
+.btn-conf {
+  height: 40px;
+  display: unset;
+  background-color: transparent;
+  color: $color-black;
+  border-radius: 10px;
+}
+
+.first-part-annulation {
+  background-color: $color-white-800;
+  padding-bottom: 60px;
+
+      .cancelButton {
+        width: 50px;
+        height: 50px;
+        color: $color-red-900;
+        margin-top: 50px;
+      }
+}

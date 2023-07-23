@@ -1,0 +1,166 @@
+@import "./filter/style.scss";
+@import "./content/style.scss";
+@import "./sessions/style.scss";
+
+
+$base-color: $color-white;
+
+$base-font-family: ($font-raleway);
+
+.coachcontainers-planning {
+  position: relative;
+  margin: 0;
+  top: 10%;
+  background: $color-white;
+  font-size: 1.4em;
+  height: auto;
+  min-height: 80vh;
+}
+
+.planning-body {
+  padding-top: 150px;
+  min-height: calc(100vh - 130px);
+  color: $color-white;
+  a {
+    text-decoration: none;
+    color: $color-gray-700;
+    cursor: pointer;
+  }
+
+  
+}
+
+@media screen and (max-width: 1440px) {
+  .planning-body {
+    font-size: 1vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .planning-body {
+    font-size: 4vw;
+  }
+}
+g .w_grid,
+#main .wrap,
+.button,
+.link.link-underline {
+  overflow: hidden;
+}
+
+.w_grid {
+  width: 90%;
+  padding-left: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  clear: both;
+}
+
+@media screen and (max-width: 1024px) {
+  .w_grid {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .w_grid {
+    margin-bottom: 3vw;
+    padding-left: 10px;
+  }
+}
+
+.w_grid.limited-content {
+  max-width: 1440px;
+}
+
+.w_grid.limited-content.planning-container:hover::after {
+  width: 100%;
+  background: $color-black-700;
+  transition: 500ms;
+}
+
+.page-template-tpl-planning .filters .w_grid .custom-select,
+.page-template-tpl-planning .filters .w_grid .filters-toggler,
+.page-template-tpl-planning .popin .button:first-of-type {
+  @media screen and (max-width: 700px) {
+    margin-bottom: 3vw;
+  }
+}
+.grid-col {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 30px;
+  @media screen and (max-width: 1024px) {
+    padding-right: 20px;
+  }
+  @media screen and (max-width: 700px) {
+    padding-right: 10px;
+  }
+}
+.grid-col.col_size-12 {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+.filters {
+  padding: 40px 0;
+  z-index: 8;
+  position: relative;
+}
+
+@media screen and (max-width: 1440px) {
+  .filters {
+    padding: 3vw 0;
+  }
+}
+
+.planning-title {
+  padding-left: 0px;
+}
+body.account-tpl,
+body.reservation-tpl {
+  color: $color-black;
+  background: $color-white-600;
+}
+
+.logo-planning {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 9em;
+  @media screen and (max-width: 700px) {
+    width: 170px;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+}
+
+
+.page-intro {
+  text-align: center;
+}
+.page-intro, .page-intro h1 {
+  margin-bottom: 60px;
+}
+.title-xl {
+ 
+  font-size: 65px;
+  line-height: 60px;
+  @media screen and (max-width: 1440px)
+  {
+      font-size: 4.4vw;
+      line-height: 4vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 11vw;
+    line-height: 12vw;
+  }
+
+}
+
+.no-gutter {
+    padding-left: 0;
+}

@@ -1,0 +1,93 @@
+.buy-t-shirt-container {
+    position: relative;
+    margin: 0;
+    top: 10%;
+    background: $color-white-600;
+    font-size: 1.4em;
+    height: auto;
+    min-height: 90vh;
+    padding-top: 150px;
+  }
+  
+  .image-t-shirt-container {
+    width: 100%;
+    background-color: $color-gray-400;
+    .img-t-shirt {
+      width: auto;
+  
+      @media screen and (max-width: 1450px) {
+        width: 100%;
+      }
+    }
+  }
+  
+  .row-t-shirt {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  
+  .t-shirt-title {
+    border-bottom: Dashed 1.5px;
+    padding-bottom: 15px;
+    text-align: start;
+    font-size: 4em;
+  
+    @media screen and (min-width: 800px) and (max-width: 1300px) {
+      font-size: 3em;
+    }
+  
+    @media screen and (max-width: 800px) {
+      font-size: 2em;
+    }
+  
+    @media screen and (max-width: 575px) {
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+  
+  .t-shirt-description {
+    text-align: start;
+    padding-top: 15px;
+  }
+  
+  .payment-container {
+    text-align: end;
+    @media screen and (max-width: 800px) {
+      text-align: center;
+    }
+  }
+  
+  .price-t-shirt {
+    margin-top: 100px;
+    h3 {
+      display: inline-block;
+    }
+  }
+  
+  .price-t-shirt > h3:last-child {
+    margin-left: 170px;
+  }
+  
+  .buy-t-shirt-button {
+    background-color: $color-black;
+    border: none;
+    height: 40px;
+    width: 250px;
+    margin: 20px 0px;
+    .buy-t-shirt-button-span {
+      color: $color-white;
+      font-size: 20px;
+    }
+  }
+  
+  .buy-t-shirt-button:hover {
+    background-color: $color-white;
+  
+    .buy-t-shirt-button-span:hover {
+      color: $color-black;
+    }
+  }
+  

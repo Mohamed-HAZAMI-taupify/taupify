@@ -1,0 +1,43 @@
+@import "./lists/style.scss";
+@import "./send-email/style.scss";
+@import "./statistiques/style.scss";
+@import "./feedback-form-report/style.scss";
+.main-view-conatainer {
+  display: grid;
+  background-color: $color-white-900;
+  .css-z9mdn {
+    &::-webkit-scrollbar-track {
+      background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #000000;
+    }
+    .card-body{
+    overflow-x: hidden;
+    &::-webkit-scrollbar-track {
+      background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #000000;
+    }
+  }
+    padding: 70px 20px 30px 20px;
+    @media screen and(max-width: 500px) {
+      padding: 70px 10px 30px 10px;
+    }
+  }
+}
+
+
+
+
+
+

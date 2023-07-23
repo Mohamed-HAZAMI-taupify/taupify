@@ -1,0 +1,476 @@
+@import "./reservation-btn/style.scss";
+.tooltip-wrapper {
+  .tooltip {
+    height: 400px;
+    top: -140%;
+    left: -25%;
+    &::after {
+      margin-top: -25%;
+    }
+  }
+  .right {
+    .tooltip {
+      left: 120px;
+      top: -50px;
+      @media screen and (max-width: 1300px) {
+
+        display: none;
+      }
+    }
+  }
+}
+.planning-list {
+  min-height: 30vh;
+  padding-bottom: 20px;
+}
+
+.resetor-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.planning-item.is-pointer,
+.planning-item.is-pointer .planning-cell {
+  cursor: pointer;
+
+  .span-complet {
+    color: $color-white;
+  }
+}
+
+.planning-item {
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 10vw;
+  }
+}
+.planning-item__container {
+  border-bottom: 0.1px solid $color-yellow-700 transparent;
+  cursor: pointer;
+  &:hover {
+    &::after {
+      border-width: 0.001px;
+      height: 1px;
+      width: 102%;
+      transition: 0.3s;
+    }
+  }
+}
+.planning-item:hover {
+  background-color: $color-black-700;
+  transition: 0.3s;
+}
+
+.planning-item .planning-item__container {
+  @media screen and (max-width: 700px) {
+    background: $color-black-700;
+  }
+}
+
+.planning-item__container {
+  position: relative;
+  display: flex;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+
+.planning-list li[data-hub="everest-hub"] .planning-item__container::after {
+  background: $color-yellow-600;
+  background-image: linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-700
+  );
+  background-image: -webkit-linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-700
+  );
+}
+
+.planning-item__container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  -webkit-transition: width 250ms;
+  -moz-transition: width 250ms;
+  transition: width 250ms;
+}
+
+.planning-item .planning-cell.planning-date {
+  @media screen and (max-width: 700px) {
+    width: 49%;
+    border-bottom: 1px solid $color-black-700;
+  }
+
+  // width: 18%;
+  min-width: 18%;
+}
+
+.planning-item .planning-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: none;
+  @media screen and (max-width: 1300px) {
+    border-right: 1px solid $color-black-700;
+    padding: 3px 4px;
+  }
+  padding: 30px 40px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 700px) {
+    display: inline-block;
+    padding: 3vw;
+    border-right: 0;
+    box-sizing: border-box;
+  }
+}
+
+.title-m {
+  font-size: 20px;
+  letter-spacing: 1.58px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 1.5vw;
+    letter-spacing: 0.12vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 6vw;
+  }
+}
+
+.title-l,
+.title-l2,
+.title-m,
+.title-sm,
+.title-xl {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.planning-item .planning-item__container::after {
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.planning-item .planning-cell.planning-time .title-sm {
+  font-weight: 400;
+}
+
+.title-sm {
+  font-size: 16px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 1.1vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 5vw;
+  }
+}
+
+.planning-item .planning-cell.planning-time .duration {
+  color: $color-gray-600;
+}
+
+.planning-item .planning-cell.planning-time {
+  min-width: 13%;
+  text-align: center;
+}
+
+.planning-item .planning-cell.planning-time .duration,
+.planning-item .planning-cell.planning-time time {
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+}
+
+.planning-item .planning-cell.planning-time {
+  @media screen and (max-width: 700px) {
+    width: 49%;
+    text-align: right;
+  }
+}
+
+.planning-item .planning-cell.planning-studio {
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding-bottom: 0;
+    text-align: left;
+  }
+  //width: 20%;
+  min-width: 25%;
+  text-align: center;
+}
+
+.planning-list
+  li[data-hub="everest-hub"]
+  .planning-studio
+  .masterclass-txt-planning {
+  background: 0 0;
+  background: -webkit-linear-gradient(
+    right,
+    $color-yellow-700,
+    $color-yellow-700
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  .activity-span-events {
+    font-size: 20px !important;
+  }
+}
+
+.planning-list
+  li[data-hub="everest-hub"]
+  .planning-studio
+  .masterclass-txt-planning:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  margin: 15px 15px 0 20px;
+  display: block;
+  background: $color-white;
+  transition: 700ms;
+}
+
+.planning-list
+  li[data-hub="everest-hub"]
+  .planning-studio
+  .masterclass-txt-planning:hover::after {
+  width: 85%;
+  transition: 800ms;
+}
+
+.planning-item .planning-cell.planning-studio h2 {
+  display: inline-block;
+  align-self: center;
+  width: 100%;
+}
+
+.planning-item .planning-cell.planning-coach {
+  min-width: 17%;
+  text-align: center;
+  z-index: 7;
+
+  @media screen and (max-width: 700px) {
+    
+    width: 100%;
+    padding-top: 0;
+    text-align: left;
+    border-bottom: 1px solid $color-black-700;
+  }
+}
+
+.planning-item .planning-cell.planning-address {
+  text-align: left;
+  flex-grow: 2;
+  min-width: 14%;
+  @media screen and (max-width: 700px) {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.planning-item .planning-cell.planning-address address {
+  display: inline-block;
+}
+
+address {
+  display: block;
+  font-style: italic;
+}
+
+.planning-item .planning-cell:last-child {
+  border-right: 0;
+  // width: 15%;
+  min-width: 13%;
+  padding: 30px 20px;
+  text-align: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 2vw 3vw;
+    width: 100%;
+  }
+}
+
+.planning-list li[data-hub="everest-hub"] .button.everest-hub {
+  border: 1px solid transparent;
+  color: $color-white;
+  background: 0 0;
+}
+
+.button.everest-hub {
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 700px) {
+    padding: 13px;
+    flex-direction: column;
+  }
+}
+
+.button.everest-hub {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  @media screen and (max-width: 1440px) {
+    padding: 1vw 2vw;
+    font-size: 0.8vw;
+    letter-spacing: 0.17vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 3vw;
+    letter-spacing: 0.8vw;
+  }
+}
+
+.link-btn-reserver {
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 0 !important;
+  text-decoration: none !important;
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 0;
+
+  .span-btn-reserver {
+    font-size: 12px;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 8px;
+    }
+  }
+}
+
+.button.everest-hub::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+}
+
+.planning-list li[data-hub="everest-hub"] .button.everest-hub::after {
+  background: $color-green-700;
+  background-image: linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-600
+  );
+  background-image: -webkit-linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-600
+  );
+  opacity: 1;
+}
+.button.thm-button-yoga {
+  @media screen and (max-width: 700px) {
+    border: 1px solid transparent;
+    color: $color-white;
+    background: 0 0;
+  }
+}
+
+.button.thm-button-yoga::after {
+  background: $color-yellow-700;
+  background-image: linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-600
+  );
+  background-image: -webkit-linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-600
+  );
+}
+
+.resetor-wrapper .resetor-all {
+  color: $color-gray-600;
+  text-decoration: underline;
+}
+
+#changing-item {
+  display: flex;
+
+  @media screen and (max-width: 700px) {
+    display: block;
+    width: 100%;
+    padding: 5vw 3vw 7vw;
+    box-sizing: border-box;
+  }
+}
+
+.planning-list li[data-hub="everest-hub"] .planning-item__container::after {
+  background: $color-yellow-700;
+  background-image: linear-gradient(
+    right bottom,
+    $color-yellow-700,
+    $color-yellow-600
+  );
+  background-image: -webkit-linear-gradient(
+    right bottom$color-yellow-700,
+    $color-yellow-600
+  );
+}
+
+.planning-item .planning-cell:last-child .button {
+  border-right: 0;
+  max-height: 11px;
+  padding: 20px 10px;
+  text-align: center;
+  background: -webkit-linear-gradient(
+    to right,
+    $color-yellow-700,
+    $color-yellow-400
+  ) !important;
+  background: linear-gradient(
+    to right,
+    $color-yellow-700,
+    $color-yellow-400
+  ) !important;
+  min-width: 150px;
+  width: 100%;
+  font-weight: bold;
+  @media screen and (max-width: 700px) {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.planning-item .planning-cell:last-child .button:hover {
+  background: -webkit-linear-gradient(
+    to right,
+    $color-yellow-400,
+    $color-yellow-900
+  ) !important;
+  background: linear-gradient(
+    to right,
+    $color-yellow-400,
+    $color-yellow-900
+  ) !important;
+  color: $color-black-700 !important;
+}
