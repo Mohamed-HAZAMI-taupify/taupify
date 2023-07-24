@@ -36,7 +36,7 @@ const NewCoachGallery = (props) => {
       },
     },
   });
-
+  
   const { data: dataCoach } = useQuery(LOAD_COACHES);
 
   const { loading: loadingActivities, data: dataActivities } =
