@@ -1,10 +1,10 @@
-export const api_var =
-  window.location.hostname === "localhost" ||
-  window.location.hostname === "127.0.0.1" ||
-  window.location.hostname === "0.0.0.0" ||
-  window.location.hostname === ""
-    ? "/api"
-    : "";
+export const api_var = "http://localhost:4000"
+  // window.location.hostname === "localhost" ||
+  // window.location.hostname === "127.0.0.1" ||
+  // window.location.hostname === "0.0.0.0" ||
+  // window.location.hostname === ""
+  //   ? "/api"
+  //   : "";
 export const _base_url_coach = api_var + "/trainers";
 export const _coach_filtered = _base_url_coach + "/coach-activity";
 export const _get_coach_image = _base_url_coach + "/get-image?searching=";
