@@ -28,6 +28,7 @@
     "date-and-time": "^0.14.2",
     "depcheck": "^1.4.3",
     "eslint-config-react-app": "^7.0.1",
+    "express": "^4.18.2",
     "file-saver": "^2.0.5",
     "framer-motion": "^2.7.8",
     "graphql": "^16.3.0",
@@ -43,6 +44,7 @@
     "react-bootstrap": "^1.0.0",
     "react-chartjs-2": "^2.10.0",
     "react-circular-progressbar": "^2.0.3",
+    "react-color-palette": "^6.2.0",
     "react-csv": "^2.2.2",
     "react-datepicker": "^3.3.0",
     "react-day-picker": "^7.4.8",
@@ -77,11 +79,10 @@
     "redux-thunk": "^2.3.0",
     "spinners-react": "^1.0.4",
     "sweetalert2": "^11.1.4",
-    "xlsx": "^0.17.0",
-    "react-color-palette": "^6.2.0"
+    "xlsx": "^0.17.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
