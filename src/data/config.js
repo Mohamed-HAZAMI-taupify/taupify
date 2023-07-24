@@ -1,4 +1,4 @@
-export const api_var1 = "http://localhost:4000"
+export const api_var1 = "http://localhost:4000" 
 export const api_var = "https://everest-backend.onrender.com"
   // window.location.hostname === "localhost" ||
   // window.location.hostname === "127.0.0.1" ||
