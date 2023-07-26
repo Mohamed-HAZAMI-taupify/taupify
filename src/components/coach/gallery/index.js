@@ -1,6 +1,7 @@
-import * as React from "react";
+import React , { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { connect } from "react-redux";
+import { useSelector , useDispatch} from "react-redux";
 import Select from "react-select";
 import CoachCard from "./coach-card";
 import { SelectSearchStyle } from "./select-search-style";
@@ -12,9 +13,9 @@ import {
   LOAD_COACHES_WITH_FILTER,
 } from "../../graphQL/Queries";
 import { useQuery } from "@apollo/client";
-import { useState } from "react";
 import SearchBarFilter from "../../planning/filter";
 import { data } from "../../../data/routes/routesData";
+import { getCoaches } from "../../../redux/actions/CoachesAction";
 const NewCoachGallery = (props) => {
   const hubs = [{ value: "Besancon", label: "Besancon" }];
   const [scroll, setScroll] = React.useState(0);
@@ -24,6 +25,15 @@ const NewCoachGallery = (props) => {
   const [coachList, setCoachList] = useState([]);
   const [filtredCoachListGQ, setFiltredCoachListGQ] = useState([]);
   const newCoachsListNums = coachList.map((coach) => coach._id);
+
+  const dispatch = useDispatch();
+  const coachesReducer = useSelector(state => state.CoachesReducer);
+  useEffect(() => {
+    dispatch(getCoaches());
+  }, []);
+
+  console.log("zzzzzjjjj"  , coachesReducer.Coaches)
+  console.log("zzzzzj"  , filtredCoachListGQ)
 
   const {
     loading: loadingFiltredCoach,
@@ -127,7 +137,7 @@ const NewCoachGallery = (props) => {
           </div>
         </div>
 
-        {errorFiltredCoach ||
+        {/* {errorFiltredCoach ||
         (!filtredCoachListGQ.length && !loadingFiltredCoach) ? (
           <NotFoundPage src="https://i.ibb.co/KbGcph1/trainer.png" />
         ) : null}
@@ -167,7 +177,40 @@ const NewCoachGallery = (props) => {
               <h1 className="title-bottom"> TRAINERS EVEREST </h1>
             </div>
           </div>
-        )}
+        )} */}
+
+        <div>
+            <div className="coachgallery">
+              <motion.div
+                className="coachthumbnails"
+                initial="initial"
+                animate="enter"
+                exit="exit"
+              >
+                {coachesReducer && coachesReducer.Coaches.map((coach, i) => (
+                  <CoachCard
+                    k={newCoachsListNums.indexOf(coach._id)}
+                    key={coach._id}
+                    image={coach.image._url}
+                    name={coach.givenName}
+                    coach={coach}
+                    desciption={coach.description}
+                    i={coach._id}
+                    id_resamania={coach.id_resamania_prod ? coach.id_resamania_prod : coach.id_resamania}
+                  />
+                ))}
+              </motion.div>
+            </div>
+
+            <div className="coach-footer">
+              <a href={data.rdv_navbar_vente_flash} className="rdv-pop-up-link">
+                <button className=" btn-ev btn-rdv-coach hvr-transparent uppercase">
+                  prendre rendez-vous
+                </button>
+              </a>
+              <h1 className="title-bottom"> TRAINERS EVEREST </h1>
+            </div>
+          </div>
       </div>
     </div>
   );
