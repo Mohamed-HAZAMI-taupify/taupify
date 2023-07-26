@@ -22,18 +22,20 @@ const NewCoachGallery = (props) => {
   const [firstScroll, setFirstScroll] = React.useState(false);
   const [searchActivity, setSearchActivity] = useState(null);
   const [sportList, setSportList] = useState([]);
-  const [coachList, setCoachList] = useState([]);
-  const [filtredCoachListGQ, setFiltredCoachListGQ] = useState([]);
-  const newCoachsListNums = coachList.map((coach) => coach._id);
+
 
   const dispatch = useDispatch();
   const coachesReducer = useSelector(state => state.CoachesReducer);
+
+  const [coachList, setCoachList] = useState([]);
+  const [filtredCoachListGQ, setFiltredCoachListGQ] = useState([]);
+  // newCoachsListNums = coachList.map((coach) => coach._id);
+  const newCoachsListNums = coachesReducer && coachesReducer.Coaches.map((coach) => coach._id);
+
   useEffect(() => {
     dispatch(getCoaches());
   }, []);
 
-  console.log("zzzzzjjjj"  , coachesReducer.Coaches)
-  console.log("zzzzzj"  , filtredCoachListGQ)
 
   const {
     loading: loadingFiltredCoach,

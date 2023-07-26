@@ -175,9 +175,7 @@ const NewCoachSingleImage = (props) => {
   const threeColumns = [1, 2, 3];
 
   const { data: dataCoach } = useQuery(LOAD_COACHES);
-  const { loading: loadingEvent, data: dataEvent } =
-    useQuery(LOAD_EVENT_PLANNING);
-
+  const { loading: loadingEvent, data: dataEvent } = useQuery(LOAD_EVENT_PLANNING);
   const { data: dataActivities } = useQuery(LOAD_ACTIVITIES);
 
   useEffect(() => {
@@ -224,12 +222,23 @@ const NewCoachSingleImage = (props) => {
             exit="exit"
           >
             <div className="trainer-item-container-single-image">
-              <div className="item-container-cover-single-image">
+              {/* <div className="item-container-cover-single-image">
                 <ImageSkeleton
                   alt="Everest home page"
                   className="single-coach-img-img"
                   src={`${
                     coachList.map((coach) => coach.image._url)[
+                      parseInt(props.match.params.k, 10)
+                    ]
+                  }`}
+                />
+              </div> */}
+              <div className="item-container-cover-single-image">
+                <ImageSkeleton
+                  alt="Everest home page"
+                  className="single-coach-img-img"
+                  src={`${
+                    coachesReducer && coachesReducer.Coaches && coachesReducer.Coaches.map((coach) => coach.image._url)[
                       parseInt(props.match.params.k, 10)
                     ]
                   }`}
