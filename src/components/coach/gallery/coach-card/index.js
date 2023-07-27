@@ -24,11 +24,11 @@ const CoachCard = (props) => {
             />
           </div>
           <div className="trainer-item-container-cartouche">
-            <ul className="coach-list">
+            {/* <ul className="coach-list">
               {coach.activities.map((e, index) => (
                 <li key={index}>{e.label}</li>
               ))}
-            </ul>
+            </ul> */}
             <span className="title-coach">{name}</span>
             <div className="position-coach">
               <img

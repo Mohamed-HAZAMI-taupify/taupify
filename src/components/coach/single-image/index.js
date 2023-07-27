@@ -343,7 +343,7 @@ const NewCoachSingleImage = (props) => {
                       className="navigation-link-no-decoration"
                     >
                       <span className="navigation-link-text">
-                        TOUS LES TRAINERS
+                        TOUS LES TRAINERS 
                       </span>
                     </Link>
                   </Col>

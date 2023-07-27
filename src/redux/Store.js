@@ -11,6 +11,7 @@ import StudioReducer from "./reducers/StudioReducer";
 import ClubReducer from "./reducers/ClubReducer";
 import EventReducer from "./reducers/EventReducer";
 import ActivityReducer from "./reducers/ActivityReducer";
+import ActivityRestReducer from "./reducers/ActivityReducerRest"
 import SubscriptionReducer from "./reducers/SubscriptionReducer";
 import MemberOwnEventsReducer from "./reducers/MemberOwnEventsReducer";
 import EventCalendarReducer from "./reducers/EventCalendarReducer";
@@ -69,6 +70,7 @@ const enhancer = composeEnhancers(
 
 const Store = createStore(
   combineReducers({
+    ActivityRestReducer,
     SearchingReducer,
     LoaderReducer,
     MembersReducer,

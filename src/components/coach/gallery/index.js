@@ -16,6 +16,8 @@ import { useQuery } from "@apollo/client";
 import SearchBarFilter from "../../planning/filter";
 import { data } from "../../../data/routes/routesData";
 import { getCoaches } from "../../../redux/actions/CoachesAction";
+import { getActivityRest } from "../../../redux/actions/ActivityRestAction";
+
 const NewCoachGallery = (props) => {
   const hubs = [{ value: "Besancon", label: "Besancon" }];
   const [scroll, setScroll] = React.useState(0);
@@ -23,9 +25,9 @@ const NewCoachGallery = (props) => {
   const [searchActivity, setSearchActivity] = useState(null);
   const [sportList, setSportList] = useState([]);
 
-
   const dispatch = useDispatch();
   const coachesReducer = useSelector(state => state.CoachesReducer);
+  const ActivityRestReducer = useSelector(state => state.ActivityRestReducer);
 
   const [coachList, setCoachList] = useState([]);
   const [filtredCoachListGQ, setFiltredCoachListGQ] = useState([]);
@@ -34,8 +36,13 @@ const NewCoachGallery = (props) => {
 
   useEffect(() => {
     dispatch(getCoaches());
+    dispatch(getActivityRest());
   }, []);
 
+
+  useEffect(() => {
+    setSportList(coachesReducer && coachesReducer.Coaches)
+  }, [ActivityRestReducer.loading]);
 
   const {
     loading: loadingFiltredCoach,
@@ -51,28 +58,43 @@ const NewCoachGallery = (props) => {
   
   const { data: dataCoach } = useQuery(LOAD_COACHES);
 
-  const { loading: loadingActivities, data: dataActivities } =
-    useQuery(LOAD_ACTIVITIES);
+  const { loading: loadingActivities, data: dataActivities } = useQuery(LOAD_ACTIVITIES);
 
-  React.useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const scrollCheck = window.scrollY > "100px";
-      if (window.scrollY > 300 && !firstScroll) {
-        setScroll(scrollCheck);
-        setFirstScroll(true);
-      }
-    });
-    !scroll && window.scrollTo(0, 0);
-    if (dataActivities) {
-      setSportList(dataActivities.activities);
+
+  // React.useEffect(() => {
+  //   document.addEventListener("scroll", () => {
+  //     const scrollCheck = window.scrollY > "100px";
+  //     if (window.scrollY > 300 && !firstScroll) {
+  //       setScroll(scrollCheck);
+  //       setFirstScroll(true);
+  //     }
+  //   });
+  //   !scroll && window.scrollTo(0, 0);
+  //   if (dataActivities) {
+  //     setSportList(dataActivities.activities);
+  //   }
+  //   if (dataFiltredCoaches) {
+  //     setFiltredCoachListGQ(dataFiltredCoaches.getfiltredCoaches);
+  //   }
+  //   if (dataCoach) {
+  //     setCoachList(dataCoach.coaches);
+  //   }
+  // }, [dataActivities, dataFiltredCoaches, dataCoach]);
+
+
+
+  const handlerFilter = (envent) => {
+    if (envent === null) {
+      setSportList(coachesReducer && coachesReducer.Coaches);
+    } else {
+      setSportList(
+        coachesReducer && coachesReducer.Coaches.filter(item => {
+          // Check if 'envent' is an array and 'item.activities' exists and contains any activity with a 'label' that exists in the 'envent' array
+          return Array.isArray(envent) && item.activities && item.activities.some(activity => envent.some(elem => elem.label === activity.label));
+        })
+      );
     }
-    if (dataFiltredCoaches) {
-      setFiltredCoachListGQ(dataFiltredCoaches.getfiltredCoaches);
-    }
-    if (dataCoach) {
-      setCoachList(dataCoach.coaches);
-    }
-  }, [dataActivities, dataFiltredCoaches, dataCoach]);
+  }
 
   return (
     <div className="coach-container">
@@ -106,20 +128,21 @@ const NewCoachGallery = (props) => {
                       <SearchBarFilter
                         placeholder="Sports"
                         options={
-                          !loadingActivities
-                            ? sportList.map((e) => ({
+                          ActivityRestReducer.loading === false
+                            ? ActivityRestReducer && ActivityRestReducer.activityList.map((e) => ({
                                 label: e.name,
                                 value: e.id,
                               }))
                             : null
                         }
-                        onChange={(event) => {
-                          event !== null
-                            ? setSearchActivity(event.map((t) => t.label))
-                            : setSearchActivity(null);
-                        }}
+                        // onChange={(event) => {
+                        //   event !== null
+                        //     ? setSearchActivity(event.map((t) => t.label))
+                        //     : setSearchActivity(null);
+                        // }}
+                        onChange={(event) => handlerFilter(event)}
                         isMulti={true}
-                        isLoading={loadingActivities}
+                        isLoading={ActivityRestReducer.loading}
                       />
 
                       <Select
@@ -183,13 +206,16 @@ const NewCoachGallery = (props) => {
 
         <div>
             <div className="coachgallery">
+              {
+                !ActivityRestReducer.loading ?
+              
               <motion.div
                 className="coachthumbnails"
                 initial="initial"
                 animate="enter"
                 exit="exit"
               >
-                {coachesReducer && coachesReducer.Coaches.map((coach, i) => (
+                {sportList.map((coach, i) => (
                   <CoachCard
                     k={newCoachsListNums.indexOf(coach._id)}
                     key={coach._id}
@@ -202,6 +228,9 @@ const NewCoachGallery = (props) => {
                   />
                 ))}
               </motion.div>
+                :
+              <NotFoundPage src="https://i.ibb.co/KbGcph1/trainer.png" />
+            }
             </div>
 
             <div className="coach-footer">
