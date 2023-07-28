@@ -14,6 +14,11 @@ import {
   LOAD_STUDIOS,
 } from "../../graphQL/Queries";
 import { useQuery } from "@apollo/client";
+import { getActivityRest } from "../../../redux/actions/ActivityRestAction";
+import { getStudioRest } from "../../../redux/actions/StudiosRestActions";
+import { getClubsRest } from "../../../redux/actions/ClubsRestActions";
+import { getEventPlaningRest } from "../../../redux/actions/EventPlaningRestActions";
+import { useSelector , useDispatch} from "react-redux";
 
 const CoachCardNull = () => {
   return <div></div>;
@@ -54,6 +59,12 @@ const PlanningList = (props) => {
   const [searchByDay, setSearchByDay] = useState(null);
   const [searchByPeriod, setSearchByPeriod] = useState(null);
 
+  const ActivityRestReducer = useSelector(state => state.ActivityRestReducer);
+  const StudioRestReducer = useSelector(state => state.StudioRestReducer);
+  const ClubsRestReducer = useSelector(state => state.ClubsRestReducer);
+  const EventPlaningRestReducer = useSelector(state => state.EventPlaningRestReducer);
+  
+console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
   const { loading: loading, data: dataSearchEvent } = useQuery(
     LOAD_EVENTS_FILTER,
     {
@@ -70,6 +81,8 @@ const PlanningList = (props) => {
     }
   );
 
+  const dispatch = useDispatch();
+
   const { loading: loadingActivities, data: dataActivities } =
     useQuery(LOAD_ACTIVITIES);
 
@@ -78,6 +91,13 @@ const PlanningList = (props) => {
   const { loading: loadingStudio, data: dataStudio } = useQuery(LOAD_STUDIOS);
 
   const { loading: loadingCoach, data: dataCoach } = useQuery(LOAD_COACHES);
+
+  useEffect(() => {
+    dispatch(getActivityRest());
+    dispatch(getStudioRest());
+    dispatch(getClubsRest());
+    dispatch(getEventPlaningRest())
+  }, []);
 
   useEffect(() => {
     if (dataSearchEvent) {
@@ -102,6 +122,7 @@ const PlanningList = (props) => {
     return diffInMs / (1000 * 60);
   }
 
+
   return (
     <>
       <div className="w_grid_filter limited-content ">
@@ -111,8 +132,8 @@ const PlanningList = (props) => {
               value={sportValue}
               placeholder="Sports"
               options={
-                !loadingActivities
-                  ? sportList.map((e) => ({
+                ActivityRestReducer.loading === false
+                  ? ActivityRestReducer && ActivityRestReducer.activityList.map((e) => ({
                       label: e.name,
                       value: e.id,
                     }))
@@ -125,7 +146,7 @@ const PlanningList = (props) => {
                   : setSearchActivity(null);
               }}
               isMulti={true}
-              isLoading={loadingActivities}
+              isLoading={ActivityRestReducer.loading}
             />
           </Col>
           <Col sm={4}>
@@ -154,12 +175,12 @@ const PlanningList = (props) => {
               value={studioValue}
               placeholder="studio"
               options={
-                !loadingStudio
-                  ? studioList.map((e) => ({
+                StudioRestReducer.loading === false
+                  ? StudioRestReducer && StudioRestReducer.StudioList.map((e) => ({
                       label: e.name,
                       value: e.id,
                     }))
-                  : ""
+                  : null
               }
               onChange={(event) => {
                 event !== null ? setStudio(event) : setStudio(null);
@@ -168,7 +189,7 @@ const PlanningList = (props) => {
                   : setSearchByStudio(null);
               }}
               isMulti={true}
-              isLoading={loadingStudio}
+              isLoading={StudioRestReducer.loading}
             />
           </Col>
         </Row>
@@ -212,12 +233,12 @@ const PlanningList = (props) => {
               value={clubValue}
               placeholder="Clubs"
               options={
-                !loadingClub
-                  ? clubList.map((e) => ({
+                ClubsRestReducer.loading === false
+                  ? ClubsRestReducer && ClubsRestReducer.clubsList.map((e) => ({
                       label: e.name,
                       value: e.id,
                     }))
-                  : ""
+                  : null
               }
               onChange={(e) => {
                 e !== null ? setClub(e) : setClub(null);
@@ -226,14 +247,14 @@ const PlanningList = (props) => {
                   : setSearchByClub(null);
               }}
               isMulti={true}
-              isLoading={loadingClub}
+              isLoading={ClubsRestReducer.loading}
             />
           </Col>
         </Row>
       </div>
       <div className=" w_grid limited-content planning-container">
-        {filtredEventListGQ
-          ? filtredEventListGQ.map((event, index) => (
+        {EventPlaningRestReducer && EventPlaningRestReducer.EventList 
+          ? EventPlaningRestReducer.EventList.map((event, index) => (
               <ul id="container_planning" key={event.id}>
                 <li
                   className="planning-item grid-col col_size-12 is-pointer status-reserver"
@@ -423,7 +444,7 @@ const PlanningList = (props) => {
                     ) : event.attendingLimit === event.bookedAttendees.length &&
                       event.queuedAttendees.length < event.queueLimit ? (
                       <ReservationButton
-                        i={event.id.replace(/^\D+/g, "")}
+                        i={event["@id"].replace(/^\D+/g, "")}
                         coach={event.coach.replace(/^\D+/g, "")}
                         btnName={
                           event.queueLimit
@@ -445,7 +466,7 @@ const PlanningList = (props) => {
                       </div>
                     ) : (
                       <ReservationButton
-                        i={event.id.replace(/^\D+/g, "")}
+                        i={event["@id"].replace(/^\D+/g, "")}
                         coach={event.coach && event.coach.replace(/^\D+/g, "")}
                         btnName={
                           "réserver"
@@ -463,7 +484,7 @@ const PlanningList = (props) => {
               </ul>
             ))
           : null}
-        {loading ? <WhiteSpinnerLoading loading={loading} /> : null}
+        {EventPlaningRestReducer.loading ? <WhiteSpinnerLoading loading={loading} /> : null}
       </div>
       <section className="explore-planning content">
         <div className="w_grid no-gutter">

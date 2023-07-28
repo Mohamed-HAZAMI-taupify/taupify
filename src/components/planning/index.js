@@ -11,7 +11,6 @@ const Planning = (props) => {
       <section className="page-intro content">
         <div className="w_grid limited-content no-gutter planning-title">
           <h1 className="title-xl">RÉSERVEZ VOTRE SESSION</h1>
-     
         </div>
       </section>
       <section className="planning-list content">

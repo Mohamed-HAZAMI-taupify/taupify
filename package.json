@@ -102,6 +102,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://everest-backend.onrender.com"
+  "proxy": "http://localhost:4000"
 }
 

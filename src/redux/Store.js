@@ -8,13 +8,16 @@ import AuthReducer from "./reducers/AuthReducer";
 import AlertReducer from "./reducers/AlertReducer";
 import CoachListReducer from "./reducers/CoachReducer";
 import StudioReducer from "./reducers/StudioReducer";
+import StudioRestReducer from "./reducers/StudioRestReducer";
 import ClubReducer from "./reducers/ClubReducer";
+import ClubsRestReducer from "./reducers/ClubRestReducer";
 import EventReducer from "./reducers/EventReducer";
 import ActivityReducer from "./reducers/ActivityReducer";
 import ActivityRestReducer from "./reducers/ActivityReducerRest"
 import SubscriptionReducer from "./reducers/SubscriptionReducer";
 import MemberOwnEventsReducer from "./reducers/MemberOwnEventsReducer";
 import EventCalendarReducer from "./reducers/EventCalendarReducer";
+import EventPlaningRestReducer from "./reducers/EventPlaningRestReducer";
 import EverfitContactReducer from "./reducers/everfit/ContactReducer";
 import ContactUsProspectReducer from "./reducers/MesssageProspectReducer";
 import LemonOneContactReducer from "./reducers/lemon-one/ContactReducer";
@@ -79,8 +82,11 @@ const Store = createStore(
     AlertReducer,
     CoachListReducer,
     StudioReducer,
+    StudioRestReducer,
     ClubReducer,
+    ClubsRestReducer,
     EventReducer,
+    EventPlaningRestReducer,
     AuthReducer,
     ActivityReducer,
     SubscriptionReducer,

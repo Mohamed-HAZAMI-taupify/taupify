@@ -1,5 +1,5 @@
-export const api_var1 = "http://localhost:4000" 
-export const api_var = "https://everest-backend.onrender.com"
+export const api_var = "http://localhost:4000" 
+export const api_var1 = "https://everest-backend.onrender.com"
   // window.location.hostname === "localhost" ||
   // window.location.hostname === "127.0.0.1" ||
   // window.location.hostname === "0.0.0.0" ||
@@ -13,6 +13,8 @@ export const _base_url_rdv = api_var + "/rdv";
 export const _active_rdv = _base_url_rdv + "/active-rdv";
 export const _canceled_rdv = _base_url_rdv + "/canceled-rdv";
 export const _filtered_rdvs = _base_url_rdv + "/filtered";
+
+export const _base_url_EventPlaning = api_var + "/event-planning/AllEventPlaning";
 
 export const _base_url_email = api_var + "/email";
 export const _send_email = _base_url_email + "/send";
