@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.43d8b9af.chunk.css",
-    "main.js": "/static/js/main.64b65f74.chunk.js",
+    "main.js": "/static/js/main.b6db3e5a.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.1adc4c70.js",
     "static/css/2.680d4fbe.chunk.css": "/static/css/2.680d4fbe.chunk.css",
-    "static/js/2.7eb32985.chunk.js": "/static/js/2.7eb32985.chunk.js",
+    "static/js/2.6502e5ba.chunk.js": "/static/js/2.6502e5ba.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.dd06b807af1dd3e1177fa17fb302a8d0.js": "/precache-manifest.dd06b807af1dd3e1177fa17fb302a8d0.js",
+    "precache-manifest.e207fe5f33be4cb8ac3b7e050443408d.js": "/precache-manifest.e207fe5f33be4cb8ac3b7e050443408d.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.7eb32985.chunk.js.LICENSE.txt": "/static/js/2.7eb32985.chunk.js.LICENSE.txt",
+    "static/js/2.6502e5ba.chunk.js.LICENSE.txt": "/static/js/2.6502e5ba.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/static/media/background.d6cd9359.jpg",
     "static/media/cheque_cadeau_octobre_rose.pdf": "/static/media/cheque_cadeau_octobre_rose.988f6dc8.pdf",
     "static/media/circular-arrow.svg": "/static/media/circular-arrow.cbed07cc.svg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.1adc4c70.js",
     "static/css/2.680d4fbe.chunk.css",
-    "static/js/2.7eb32985.chunk.js",
+    "static/js/2.6502e5ba.chunk.js",
     "static/css/main.43d8b9af.chunk.css",
-    "static/js/main.64b65f74.chunk.js"
+    "static/js/main.b6db3e5a.chunk.js"
   ]
 }
