@@ -3,7 +3,7 @@
   "secure": "false",
   "version": "0.1.0",
   "engines": {
-    "node": "12.18.4"
+    "node": "18.17.0"
   },
   "private": true,
   "dependencies": {
