@@ -5,14 +5,14 @@ import { useSelector , useDispatch} from "react-redux";
 import Select from "react-select";
 import CoachCard from "./coach-card";
 import { SelectSearchStyle } from "./select-search-style";
-import WhiteSpinnerLoading from "../../common-components/spinner-loanding/WhiteSpinnerLoading";
+// import WhiteSpinnerLoading from "../../common-components/spinner-loanding/WhiteSpinnerLoading";
 import { NotFoundPage } from "../../common-components/not-found/Page";
-import {
-  LOAD_ACTIVITIES,
-  LOAD_COACHES,
-  LOAD_COACHES_WITH_FILTER,
-} from "../../graphQL/Queries";
-import { useQuery } from "@apollo/client";
+// import {
+//   LOAD_ACTIVITIES,
+//   LOAD_COACHES,
+//   LOAD_COACHES_WITH_FILTER,
+// } from "../../graphQL/Queries";
+// import { useQuery } from "@apollo/client";
 import SearchBarFilter from "../../planning/filter";
 import { data } from "../../../data/routes/routesData";
 import { getCoaches } from "../../../redux/actions/CoachesAction";
@@ -20,17 +20,17 @@ import { getActivityRest } from "../../../redux/actions/ActivityRestAction";
 
 const NewCoachGallery = (props) => {
   const hubs = [{ value: "Besancon", label: "Besancon" }];
-  const [scroll, setScroll] = React.useState(0);
-  const [firstScroll, setFirstScroll] = React.useState(false);
-  const [searchActivity, setSearchActivity] = useState(null);
+  // const [scroll, setScroll] = React.useState(0);
+  // const [firstScroll, setFirstScroll] = React.useState(false);
+  // const [searchActivity, setSearchActivity] = useState(null);
   const [sportList, setSportList] = useState([]);
 
   const dispatch = useDispatch();
   const coachesReducer = useSelector(state => state.CoachesReducer);
   const ActivityRestReducer = useSelector(state => state.ActivityRestReducer);
 
-  const [coachList, setCoachList] = useState([]);
-  const [filtredCoachListGQ, setFiltredCoachListGQ] = useState([]);
+  // const [coachList, setCoachList] = useState([]);
+  // const [filtredCoachListGQ, setFiltredCoachListGQ] = useState([]);
   // newCoachsListNums = coachList.map((coach) => coach._id);
   const newCoachsListNums = coachesReducer && coachesReducer.Coaches.map((coach) => coach._id);
 
@@ -44,21 +44,21 @@ const NewCoachGallery = (props) => {
     setSportList(coachesReducer && coachesReducer.Coaches)
   }, [ActivityRestReducer.loading]);
 
-  const {
-    loading: loadingFiltredCoach,
-    error: errorFiltredCoach,
-    data: dataFiltredCoaches,
-  } = useQuery(LOAD_COACHES_WITH_FILTER, {
-    variables: {
-      filter: {
-        activity_contains: searchActivity,
-      },
-    },
-  });
+  // const {
+  //   loading: loadingFiltredCoach,
+  //   error: errorFiltredCoach,
+  //   data: dataFiltredCoaches,
+  // } = useQuery(LOAD_COACHES_WITH_FILTER, {
+  //   variables: {
+  //     filter: {
+  //       activity_contains: searchActivity,
+  //     },
+  //   },
+  // });
   
-  const { data: dataCoach } = useQuery(LOAD_COACHES);
+  // const { data: dataCoach } = useQuery(LOAD_COACHES);
 
-  const { loading: loadingActivities, data: dataActivities } = useQuery(LOAD_ACTIVITIES);
+  // const { loading: loadingActivities, data: dataActivities } = useQuery(LOAD_ACTIVITIES);
 
 
   // React.useEffect(() => {

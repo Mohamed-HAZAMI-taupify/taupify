@@ -18,6 +18,7 @@ import { getActivityRest } from "../../../redux/actions/ActivityRestAction";
 import { getStudioRest } from "../../../redux/actions/StudiosRestActions";
 import { getClubsRest } from "../../../redux/actions/ClubsRestActions";
 import { getEventPlaningRest } from "../../../redux/actions/EventPlaningRestActions";
+import { getCoaches } from "../../../redux/actions/CoachesAction";
 import { useSelector , useDispatch} from "react-redux";
 
 const CoachCardNull = () => {
@@ -46,10 +47,10 @@ const PlanningList = (props) => {
   const [DayValue, setDay] = useState(null);
   const [timeValue, setTime] = useState(null);
 
-  const [filtredEventListGQ, setFiltredEventListGQL] = useState([]);
-  const [sportList, setSportList] = useState([]);
-  const [clubList, setClubList] = useState([]);
-  const [studioList, setStudioList] = useState([]);
+  // const [filtredEventListGQ, setFiltredEventListGQL] = useState([]);
+  // const [sportList, setSportList] = useState([]);
+  // const [clubList, setClubList] = useState([]);
+  // const [studioList, setStudioList] = useState([]);
   const [coachList, setCoachList] = useState([]);
 
   const [searchActivity, setSearchActivity] = useState(null);
@@ -63,59 +64,61 @@ const PlanningList = (props) => {
   const StudioRestReducer = useSelector(state => state.StudioRestReducer);
   const ClubsRestReducer = useSelector(state => state.ClubsRestReducer);
   const EventPlaningRestReducer = useSelector(state => state.EventPlaningRestReducer);
+  const coachesReducer = useSelector(state => state.CoachesReducer);
   
-console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
-  const { loading: loading, data: dataSearchEvent } = useQuery(
-    LOAD_EVENTS_FILTER,
-    {
-      variables: {
-        filter: {
-          activity_contains: searchActivity,
-          coach_contains: searchByCoach,
-          club_contains: searchByClub,
-          studio_contains: searchByStudio,
-          day_contains: searchByDay,
-          time_contains: searchByPeriod,
-        },
-      },
-    }
-  );
+// console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
+  // const { loading: loading, data: dataSearchEvent } = useQuery(
+  //   LOAD_EVENTS_FILTER,
+  //   {
+  //     variables: {
+  //       filter: {
+  //         activity_contains: searchActivity,
+  //         coach_contains: searchByCoach,
+  //         club_contains: searchByClub,
+  //         studio_contains: searchByStudio,
+  //         day_contains: searchByDay,
+  //         time_contains: searchByPeriod,
+  //       },
+  //     },
+  //   }
+  // );
 
   const dispatch = useDispatch();
 
-  const { loading: loadingActivities, data: dataActivities } =
-    useQuery(LOAD_ACTIVITIES);
+  // const { loading: loadingActivities, data: dataActivities } =
+  //   useQuery(LOAD_ACTIVITIES);
 
-  const { loading: loadingClub, data: dataClub } = useQuery(LOAD_CLUBS);
+  // const { loading: loadingClub, data: dataClub } = useQuery(LOAD_CLUBS);
 
-  const { loading: loadingStudio, data: dataStudio } = useQuery(LOAD_STUDIOS);
+  // const { loading: loadingStudio, data: dataStudio } = useQuery(LOAD_STUDIOS);
 
-  const { loading: loadingCoach, data: dataCoach } = useQuery(LOAD_COACHES);
+  // const { loading: loadingCoach, data: dataCoach } = useQuery(LOAD_COACHES);
 
   useEffect(() => {
     dispatch(getActivityRest());
     dispatch(getStudioRest());
     dispatch(getClubsRest());
     dispatch(getEventPlaningRest())
+    dispatch(getCoaches());
   }, []);
 
-  useEffect(() => {
-    if (dataSearchEvent) {
-      setFiltredEventListGQL(dataSearchEvent.getfiltredEvents);
-    }
-    if (dataActivities) {
-      setSportList(dataActivities.activities);
-    }
-    if (dataClub) {
-      setClubList(dataClub.clubs);
-    }
-    if (dataStudio) {
-      setStudioList(dataStudio.studios);
-    }
-    if (dataCoach) {
-      setCoachList(dataCoach.coaches);
-    }
-  }, [dataSearchEvent, dataActivities, dataClub, dataStudio, dataCoach]);
+  // useEffect(() => {
+  //   if (dataSearchEvent) {
+  //     setFiltredEventListGQL(dataSearchEvent.getfiltredEvents);
+  //   }
+  //   if (dataActivities) {
+  //     setSportList(dataActivities.activities);
+  //   }
+  //   if (dataClub) {
+  //     setClubList(dataClub.clubs);
+  //   }
+  //   if (dataStudio) {
+  //     setStudioList(dataStudio.studios);
+  //   }
+  //   if (dataCoach) {
+  //     setCoachList(dataCoach.coaches);
+  //   }
+  // }, [dataSearchEvent, dataActivities, dataClub, dataStudio, dataCoach]);
 
   function getDifferenceInMinutes(date1, date2) {
     const diffInMs = Math.abs(date2 - date1);
@@ -154,8 +157,7 @@ console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
               value={coachValue}
               placeholder="Trainers"
               options={
-                !loadingCoach &&
-                coachList.map((e) => ({
+                coachesReducer && coachesReducer.Coaches.map((e) => ({
                   label: e.givenName,
                   value: e.id_resamania_prod,
                 }))
@@ -167,7 +169,7 @@ console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
                   : setSearchByCoach(null);
               }}
               isMulti={true}
-              isLoading={loadingCoach}
+              isLoading={coachesReducer.loading}
             />
           </Col>
           <Col sm={4}>
@@ -445,7 +447,7 @@ console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
                       event.queuedAttendees.length < event.queueLimit ? (
                       <ReservationButton
                         i={event["@id"].replace(/^\D+/g, "")}
-                        coach={event.coach.replace(/^\D+/g, "")}
+                        // coach={event.coach.replace(/^\D+/g, "")}
                         btnName={
                           event.queueLimit
                             ? "Liste d'attente " +
@@ -484,7 +486,7 @@ console.log("EventPlaningRestReducer" , EventPlaningRestReducer.EventList)
               </ul>
             ))
           : null}
-        {EventPlaningRestReducer.loading ? <WhiteSpinnerLoading loading={loading} /> : null}
+        {EventPlaningRestReducer.loading ? <WhiteSpinnerLoading loading={EventPlaningRestReducer.loading} /> : null}
       </div>
       <section className="explore-planning content">
         <div className="w_grid no-gutter">
